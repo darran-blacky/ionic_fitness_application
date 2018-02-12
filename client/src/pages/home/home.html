@@ -1,0 +1,18 @@
+  <ion-content padding id="welcome">
+    
+    <img src="assets/icon/favicon.ico" class="logo"/>
+    <h1> Welcome to My Fitness Helper </h1>
+    <div>Click Continue to take tutorial!</div>
+    
+    <div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+        <div class="flb">
+          <div class="Aligner-item Aligner-item--top"></div>
+          <img src="assets/icon/dumbbell.svg">
+          <p>  My Fitness Helper <p>
+          <div class="Aligner-item Aligner-item--bottom"></div>
+        </div>
+      </div>
+      
+    <button ion-button block color="lightprimary" (click)="continue()">Continue</button>
+    
+  </ion-content>
