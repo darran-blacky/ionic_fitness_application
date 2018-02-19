@@ -24732,12 +24732,12 @@ ion-navbar.toolbar {
 }
 
 ion-content {
-  background-color: #EFEFEF !important;
+  background-color: #33ac66 !important;
   font-family: 'Raleway';
 }
 
 page-home #home .background {
-  background-image: url("../assets/img/bg.jpg");
+  background-image: url("../assets/img/polygon-3.jpg");
 }
 
 page-home #home h1 {
@@ -24761,11 +24761,11 @@ page-home #custom-overlay {
   left: 0;
   z-index: 100000;
   width: 100%;
-  background-color: #002a3e;
+  background-image: url("../assets/img/polygon-3.jpg");
 }
 
 page-home .flb {
-  background-color: #3ebffb;
+  background-image: url("../assets/img/polygon-3.jpg");
   height: 100%;
   width: 100%;
   -webkit-animation: pulse 1s linear forwards;
@@ -24827,7 +24827,7 @@ page-home #custom-overlay img {
 }
 
 page-main .background {
-  background-image: url("../assets/img/images (1).jpeg");
+  background-image: url("../assets/img/polygon-1.jpg");
 }
 
 page-main .scroll-content {
@@ -24900,11 +24900,11 @@ page-main .bottom {
   bottom: 0;
 }
 
-page-signup .background {
-  background-image: url("../assets/img/images (1).jpeg");
+signup-page .background {
+  background-image: url("../assets/img/polygon-1.jpg");
 }
 
-page-signup .scroll-content {
+signup-page .scroll-content {
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
@@ -24920,62 +24920,70 @@ page-signup .scroll-content {
   text-align: center;
 }
 
-page-signup ion-card.card {
+signup-page ion-card.card {
   box-shadow: none;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
 }
 
-page-signup a, page-signup p,
-page-signup ion-card-header.card-header {
+signup-page a, signup-page p,
+signup-page ion-card-header.card-header {
   color: #fff !important;
 }
 
-page-signup .list > .item-block:first-child {
+signup-page .list > .item-block:first-child {
   border: medium none;
 }
 
-page-signup .list > .item-block:first-child .text-input {
+signup-page .list > .item-block:first-child .text-input {
   color: #fff;
 }
 
-page-signup .item {
+signup-page .item {
   margin-bottom: 10px;
   background: rgba(255, 255, 255, 0.5);
   border: medium none;
 }
 
-page-signup .item .text-input {
+signup-page .item .text-input {
   color: #fff;
 }
 
-page-signup .item input::-moz-placeholder {
+signup-page .item input::-moz-placeholder {
   color: #fff !important;
 }
 
-page-signup .item input:-moz-placeholder {
+signup-page .item input:-moz-placeholder {
   color: #fff !important;
 }
 
-page-signup .item *::-webkit-input-placeholder {
+signup-page .item *::-webkit-input-placeholder {
   color: #fff !important;
 }
 
-page-signup .item *:-ms-input-placeholder {
+signup-page .item *:-ms-input-placeholder {
   color: #fff !important;
 }
 
-page-signup .item *:-moz-placeholder {
+signup-page .item *:-moz-placeholder {
   color: #fff !important;
 }
 
-page-signup .icon {
+signup-page .icon {
   padding-right: 10px;
 }
 
-page-signup .bottom {
+signup-page .custom-pop {
+  background-color: lightsteelblue;
+}
+
+signup-page .bottom {
   position: absolute;
   bottom: 0;
+}
+
+signup-page .custom-icon {
+  color: white;
 }
 
 .diag {
@@ -24994,18 +25002,19 @@ ion-icon {
 h2 {
   margin-top: 80% !important;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1.3em;
+  color: white;
 }
 
 p {
   width: 80%;
   display: block;
   margin: 0 auto;
-  font-size: .9em;
+  font-size: .93em;
 }
 
 .swiper-pagination-bullet-active {
-  background: #C400FF;
+  background: white;
 }
 
 .swiper-pagination {
@@ -25020,4 +25029,6 @@ p {
   text-align: center;
   cursor: pointer;
   z-index: 5;
+  color: white;
+  font-weight: bold;
 }

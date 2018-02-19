@@ -1,9 +1,13 @@
 <ion-content class="background">
+
 	<ion-card>
+
 		<ion-card-header>
 			MyFitnessHelper
 		</ion-card-header>
+
 		<ion-card-content>
+
 			<ion-list no-line>
 				<ion-item>
 					<ion-input type="text" placeholder="Email" [(ngModel)]="email"></ion-input>
@@ -11,11 +15,13 @@
 				<ion-item>
 					<ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
 				</ion-item>
-				
 				<button ion-button block outline color="light" (click)="login()">Log in</button>
 			</ion-list>
+
 		</ion-card-content>
+
 	</ion-card>
+
 	<button class="bottom" ion-button clear full color="light" (click)="launchSignup()">Don't have an account? Sign up</button>
 </ion-content>
  

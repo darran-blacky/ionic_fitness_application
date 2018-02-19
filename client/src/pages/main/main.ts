@@ -3,8 +3,8 @@ import { NavController, LoadingController } from 'ionic-angular';
 import { SignupPage } from '../signup/signup';
 import { Auth } from '../../providers/auth/auth'; 
 // import { Router } from '@angular/router';
-import { RegularUserPage } from '../regular-user/regular-user';
-
+// import { RegularUserPage } from '../regular-user/regular-user';
+import { SideMenuPage } from '../side-menu/side-menu'
 /**
  * Generated class for the MainPage page.
  *
@@ -34,7 +34,7 @@ export class MainPage {
       this.authService.checkAuthentication().then((res) => {
           console.log("Already authorized");
           this.loading.dismiss();
-          this.navCtrl.setRoot(RegularUserPage);
+          this.navCtrl.setRoot(SideMenuPage);
       }, (err) => {
           console.log("Not already authorized");
           this.loading.dismiss();
@@ -54,7 +54,7 @@ export class MainPage {
            this.authService.login(credentials).then((result) => {
                this.loading.dismiss();
                console.log(result);
-               this.navCtrl.setRoot(RegularUserPage);
+               this.navCtrl.setRoot(SideMenuPage);
            }, (err) => {
                this.loading.dismiss();
                console.log(err);

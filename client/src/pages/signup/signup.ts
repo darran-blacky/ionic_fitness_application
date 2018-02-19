@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { NavController, LoadingController } from 'ionic-angular';
+import { NavController, IonicPage,  LoadingController } from 'ionic-angular';
 import { Auth } from '../../providers/auth/auth';
 import { HomePage } from '../home/home';
 import { RegularUserPage } from '../regular-user/regular-user';
 import { PtUserPage } from '../pt-user/pt-user';
 
+@IonicPage()
 @Component({
   selector: 'signup-page',
   templateUrl: 'signup.html'
@@ -16,9 +17,8 @@ export class SignupPage {
   password: string;
   loading: any;
   constructor(public navCtrl: NavController, public authService: Auth, public loadingCtrl: LoadingController) {
- 
   }
- 
+  ionViewDidLoad() {}
   register(){
  
     this.showLoader();

@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { NavController, ModalController, AlertController, LoadingController } from 'ionic-angular';
+import { NavController,IonicPage, ModalController, AlertController, LoadingController } from 'ionic-angular';
 import { Todos } from '../../providers/todos/todos';
 import { Auth } from '../../providers/auth/auth';
 import { MainPage } from '../main/main';
@@ -9,6 +9,7 @@ import { MainPage } from '../main/main';
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
+@IonicPage()
 @Component({
   selector: 'page-regular-user',
   templateUrl: 'regular-user.html',

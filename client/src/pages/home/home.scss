@@ -2,13 +2,14 @@
 page-home {
 #home{
     .background {
-        background-image: url('../assets/img/bg.jpg');
+        background-image: url('../assets/img/polygon-3.jpg');
       
 	}
     h1{
         font-size: 52px;
         margin-top:50px
     }
+   
     .marginTop{
         margin-top:150px;
     }
@@ -25,11 +26,11 @@ page-home {
     left: 0;
     z-index: 100000;
     width:100%;
-    background-color: #002a3e;
+    background-image: url('../assets/img/polygon-3.jpg');
   }
   
   .flb {
-    background-color: #3ebffb;
+    background-image: url('../assets/img/polygon-3.jpg');
     height:100%;
     width:100%;
     animation: pulse 1s linear forwards;

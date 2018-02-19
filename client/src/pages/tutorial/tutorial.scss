@@ -14,18 +14,19 @@ ion-icon {
 h2 {
     margin-top:80% !important;
     font-weight:bold;
-    font-size:1em;
+    font-size:1.3em;
+    color: white;
 }
 
 p {
     width:80%;
     display:block;
     margin: 0 auto;
-    font-size:.9em;
+    font-size:.93em;
 }
 
 .swiper-pagination-bullet-active {
-    background:#C400FF;
+    background:rgb(255, 255, 255);
 }
 
 .swiper-pagination {
@@ -40,4 +41,6 @@ p {
     text-align: center;
     cursor: pointer;
     z-index: 5;
+    color: white;
+    font-weight:bold;
 }

@@ -18,6 +18,12 @@ import { Todos } from '../providers/todos/todos';
 import { Auth } from '../providers/auth/auth';
 import { StorageProvider } from '../providers/storage/storage';
 import { HttpModule } from '@angular/http';
+import { SideMenuPage } from '../pages/side-menu/side-menu'
+import { WorkoutsPage } from '../pages/workouts/workouts'
+import { NutritionPage } from '../pages/nutrition/nutrition'
+
+import { RegularUserPageModule } from '../pages/regular-user/regular-user.module';
+
 // import { IonicPageModule } from 'ionic-angular/module';
 
 @NgModule({
@@ -27,15 +33,17 @@ import { HttpModule } from '@angular/http';
     MainPage,
     TutorialPage,
     SignupPage,
-    RegularUserPage,
-    PtUserPage
+    // RegularUserPage,
+    PtUserPage,
+    SideMenuPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(), 
     BrowserAnimationsModule,
-    HttpModule
+    HttpModule,
+    RegularUserPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -45,7 +53,8 @@ import { HttpModule } from '@angular/http';
     TutorialPage,
     SignupPage,
     RegularUserPage,
-    PtUserPage
+    PtUserPage,
+    SideMenuPage
   ],
   providers: [
     StatusBar,

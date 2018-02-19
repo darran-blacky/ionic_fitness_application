@@ -23,7 +23,7 @@ export class HomePage {
    
  
    ionViewDidLoad() {
-     setTimeout(() => this.splash = false, 4000);
+     setTimeout(() => this.splash = false, 2200);
    }
  
  
