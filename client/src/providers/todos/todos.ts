@@ -35,8 +35,7 @@ export class Todos {
       let headers = new Headers();
       headers.append('Content-Type', 'application/json');
       headers.append('Authorization', this.authService.token);
-      console.log(" ????????? ");
-      
+    
       this.http.post('https://mfhserver.herokuapp.com/api/todos', JSON.stringify(todo), {headers: headers})
         .map(res => res.json())
         .subscribe(res => {

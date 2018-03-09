@@ -34,48 +34,48 @@ export class PtUserPage {
    
     }
    
-    addTodo(){
+    // addTodo(){
    
-      let prompt = this.alertCtrl.create({
-        title: 'Add Todo',
-        message: 'Describe your todo below:',
-        inputs: [
-          {
-            name: 'title'
-          }
-        ],
-        buttons: [
-          {
-            text: 'Cancel'
-          },
-          {
-            text: 'Save',
-            handler: todo => {
+    //   let prompt = this.alertCtrl.create({
+    //     title: 'Add Todo',
+    //     message: 'Describe your todo below:',
+    //     inputs: [
+    //       {
+    //         name: 'title'
+    //       }
+    //     ],
+    //     buttons: [
+    //       {
+    //         text: 'Cancel'
+    //       },
+    //       {
+    //         text: 'Save',
+    //         handler: todo => {
    
-                  if(todo){
+    //               if(todo){
    
-                      this.showLoader();
+    //                   this.showLoader();
    
-                      this.todoService.createTodo(todo).then((result) => {
-                          this.loading.dismiss();
-                          this.todos = result;
-                          console.log("todo created");
-                      }, (err) => {
-                          this.loading.dismiss();
-                          console.log("not allowed");
-                      });
+    //                   this.todoService.createTodo(todo).then((result) => {
+    //                       this.loading.dismiss();
+    //                       this.todos = result;
+    //                       console.log("todo created");
+    //                   }, (err) => {
+    //                       this.loading.dismiss();
+    //                       console.log("not allowed");
+    //                   });
    
-                  }
+    //               }
    
    
-            }
-          }
-        ]
-      });
+    //         }
+    //       }
+    //     ]
+    //   });
    
-      prompt.present();
+    //   prompt.present();
    
-    }
+    // }
    
     deleteTodo(todo){
    

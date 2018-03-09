@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { NavController, LoadingController } from 'ionic-angular';
 import { SignupPage } from '../signup/signup';
 import { Auth } from '../../providers/auth/auth'; 
-// import { Router } from '@angular/router';
-// import { RegularUserPage } from '../regular-user/regular-user';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SideMenuPage } from '../side-menu/side-menu'
+
 /**
  * Generated class for the MainPage page.
  *
@@ -16,16 +16,24 @@ import { SideMenuPage } from '../side-menu/side-menu'
   selector: 'page-main',
   templateUrl: 'main.html',
 })
+
 export class MainPage {
-  email: string;
-  password: string;
-  loading: any;
+   email:    string;
+   password: string;
+   loading:  any;
 
-  // constructor(public navCtrl: NavController, public authService: Auth, public loadingCtrl: LoadingController) {
+   slideOneForm: FormGroup;
+   slideTwoForm: FormGroup; 
+   submitAttempt: boolean = false;
 
-  // }
-  constructor(public navCtrl: NavController,  public authService: Auth, public loadingCtrl: LoadingController) {
-  }
+  constructor(public navCtrl: NavController, public formBuilder: FormBuilder,  public authService: Auth, public loadingCtrl: LoadingController) {
+   
+    this.slideOneForm = formBuilder.group({
+        email: ['', Validators.compose([Validators.maxLength(70), Validators.pattern('^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$'), Validators.required])],
+        password: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])]
+    });  
+
+}
   ionViewDidLoad() {
 
       this.showLoader();

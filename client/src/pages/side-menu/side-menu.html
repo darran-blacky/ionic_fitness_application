@@ -13,6 +13,8 @@
           {{ p.title }}
         </button>
     </ion-list>
+    <button ion-button block outline color="light" (click)="logout()">Log Out : {{ details?.email }}</button>
+    {{ details?.role }}
   </ion-content>
 
 </ion-menu>

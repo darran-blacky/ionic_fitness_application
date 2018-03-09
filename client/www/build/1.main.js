@@ -6,9 +6,9 @@ webpackJsonp([1],{
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs__ = __webpack_require__(287);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsPageModule", function() { return TabsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nutrition__ = __webpack_require__(288);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NutritionPageModule", function() { return NutritionPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,36 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var TabsPageModule = (function () {
-    function TabsPageModule() {
+var NutritionPageModule = (function () {
+    function NutritionPageModule() {
     }
-    return TabsPageModule;
+    return NutritionPageModule;
 }());
-TabsPageModule = __decorate([
+NutritionPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */],
+            __WEBPACK_IMPORTED_MODULE_2__nutrition__["a" /* NutritionPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__nutrition__["a" /* NutritionPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */]
+            __WEBPACK_IMPORTED_MODULE_2__nutrition__["a" /* NutritionPage */]
         ]
     })
-], TabsPageModule);
+], NutritionPageModule);
 
-//# sourceMappingURL=tabs.module.js.map
+//# sourceMappingURL=nutrition.module.js.map
 
 /***/ }),
 
-/***/ 287:
+/***/ 288:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NutritionPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,25 +59,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var TabsPage = (function () {
-    function TabsPage(navParams) {
-        this.tab1Root = 'NutritionPage';
-        this.tab2Root = 'WorkoutsPage';
-        this.tab3Root = 'RegularUserPage';
-        // Set the active tab based on the passed index from menu.ts
-        this.myIndex = navParams.data.tabIndex || 0;
+/**
+ * Generated class for the NutritionPage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var NutritionPage = (function () {
+    function NutritionPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
     }
-    return TabsPage;
+    NutritionPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad NutritionPage');
+    };
+    return NutritionPage;
 }());
-TabsPage = __decorate([
+NutritionPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
-        selector: 'page-tabs',template:/*ion-inline-start:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/tabs/tabs.html"*/'<!--\n  Generated template for the TabsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-tabs color="secondary" [selectedIndex]="myIndex">\n  <ion-tab [root]="tab1Root" tabTitle="Tab 1" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Tab 2" tabIcon="contacts"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Tab 3" tabIcon="clipboard"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/tabs/tabs.html"*/,
+        selector: 'page-nutrition',template:/*ion-inline-start:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/nutrition/nutrition.html"*/'<!--\n  Generated template for the NutritionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="secondary">\n      <ion-buttons start>\n          <button ion-button menuToggle>\n                <ion-icon name="menu"></ion-icon>\n              </button>\n         </ion-buttons>\n            <ion-title>Nutrition</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n\n  \n  \n    '/*ion-inline-end:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/nutrition/nutrition.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-], TabsPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+], NutritionPage);
 
-//# sourceMappingURL=tabs.js.map
+//# sourceMappingURL=nutrition.js.map
 
 /***/ })
 

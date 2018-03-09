@@ -18,10 +18,12 @@ export class RegularUserPage {
 
   todos: any;
   loading: any;
- 
+  userDetails: any;
+  new_todo: any;
+
   constructor(public navCtrl: NavController, public todoService: Todos, public modalCtrl: ModalController,
     public alertCtrl: AlertController, public authService: Auth, public loadingCtrl: LoadingController) {
- 
+     this.userDetails = authService.getUserEmail();
   }
  
   ionViewDidLoad(){
@@ -51,15 +53,23 @@ export class RegularUserPage {
         {
           text: 'Save',
           handler: todo => {
- 
                 if(todo){
- 
+                 
+                  this.new_todo = {
+                        title: todo.title,
+                        name: this.userDetails
+                  }
+
+                console.log("SAVE TODO : -------> ", todo.title)
+          
                     this.showLoader();
- 
-                    this.todoService.createTodo(todo).then((result) => {
+                    
+                    this.todoService.createTodo(this.new_todo).then((result) => {
+                      console.log("todo === " , this.new_todo);
+                      
                         this.loading.dismiss();
                         this.todos = result;
-                        console.log("todo created");
+                        console.log("todo created : " , result);
                     }, (err) => {
                         this.loading.dismiss();
                        

@@ -7,12 +7,26 @@
 <ion-header>
 
   <ion-navbar color="secondary">
+      <ion-buttons left >
+          <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+              </button>
+         </ion-buttons>
     <ion-title>Workouts</ion-title>
   </ion-navbar>
-
+  
 </ion-header>
 
-
-<ion-content padding>
- 
-</ion-content>
+<ion-content>
+  
+   <ion-list>
+  
+     <ion-item-sliding *ngFor="let name of names">
+        <ion-item> 
+          <button ion-button color="secondary">{{name.title}}</button>   
+        </ion-item>
+     </ion-item-sliding>
+  
+   </ion-list>
+  
+ </ion-content>

@@ -6,14 +6,16 @@
 -->
 <ion-header>
     <ion-navbar color="secondary">
+     <ion-buttons start>
+      <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+     </ion-buttons>
      <ion-title>
-       Todo Roles : (Regular)
+       Todo Roles
      </ion-title>
      <ion-buttons end>
        <button ion-button icon-only (click)="addTodo()"><ion-icon name="add"></ion-icon></button>
-     </ion-buttons>
-     <ion-buttons start>
-       <button ion-button icon-only (click)="logout()"><ion-icon name="power"></ion-icon></button>
      </ion-buttons>
     </ion-navbar>
    </ion-header>
@@ -25,7 +27,7 @@
        <ion-item-sliding *ngFor="let todo of todos">
     
          <ion-item>
-           {{todo.title}}
+           {{todo.title}} : {{todo.name}}
          </ion-item>
     
          <ion-item-options>

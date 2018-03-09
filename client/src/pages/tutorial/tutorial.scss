@@ -1,6 +1,6 @@
 .diag {
-    position:absolute;
-    z-index:1;
+    position:absolute;    
+    z-index:1;    
     width:100%;
     top: 0;
     height: 66%;
@@ -23,6 +23,7 @@ p {
     display:block;
     margin: 0 auto;
     font-size:.93em;
+    color: ivory;
 }
 
 .swiper-pagination-bullet-active {
@@ -32,7 +33,9 @@ p {
 .swiper-pagination {
     bottom: 12% !important;
 }
-
+.ion {
+    color: rgb(51, 172, 102);
+}
 #skip {
     position:absolute;
     bottom: 20px;

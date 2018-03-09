@@ -4,7 +4,7 @@ signup-page {
             background-image: url('../assets/img/polygon-1.jpg');
            
         }
-    
+       
         .scroll-content {
             align-content: center;
             display: flex;
@@ -35,7 +35,7 @@ signup-page {
             margin-bottom: 10px;
             background: rgba(255, 255, 255, 0.5);
             border: medium none;
-    
+            
             .text-input, {
                 color: #fff;
             }
@@ -66,6 +66,8 @@ signup-page {
         }
         .custom-pop{
             background-color: lightsteelblue;
+            height: 30px;
+            color: black;
         }
         .bottom {
             position: absolute;

@@ -1,14 +1,14 @@
 webpackJsonp([0],{
 
-/***/ 284:
+/***/ 286:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__workouts__ = __webpack_require__(288);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WorkoutsPageModule", function() { return WorkoutsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs__ = __webpack_require__(289);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsPageModule", function() { return TabsPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,36 +18,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var WorkoutsPageModule = (function () {
-    function WorkoutsPageModule() {
+var TabsPageModule = (function () {
+    function TabsPageModule() {
     }
-    return WorkoutsPageModule;
+    return TabsPageModule;
 }());
-WorkoutsPageModule = __decorate([
+TabsPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__workouts__["a" /* WorkoutsPage */],
+            __WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__workouts__["a" /* WorkoutsPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__workouts__["a" /* WorkoutsPage */]
+            __WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */]
         ]
     })
-], WorkoutsPageModule);
+], TabsPageModule);
 
-//# sourceMappingURL=workouts.module.js.map
+//# sourceMappingURL=tabs.module.js.map
 
 /***/ }),
 
-/***/ 288:
+/***/ 289:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WorkoutsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__ = __webpack_require__(17);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,31 +60,46 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the WorkoutsPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-var WorkoutsPage = (function () {
-    function WorkoutsPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
+
+var TabsPage = (function () {
+    function TabsPage(navParams, authService) {
+        this.authService = authService;
+        this.reg = true;
+        this.tab1Root = "DashboardPage";
+        this.tab2Root = "WorkoutsPage";
+        this.tabs = [
+            { title: 'Home', tabComponent: 'DashboardPage', icon: 'home' },
+            { title: 'Workouts', tabComponent: 'WorkoutsPage', icon: 'analytics' }
+            // { title: this.role_title, tabComponent: this.role_component,  icon: this.role_icon }
+        ];
+        // Set the active tab based on the passed index from menu.ts
+        this.myIndex = navParams.data.tabIndex || 0;
+        this.details = this.authService.getUserDetails();
+        var x = this.authService.getUserRole();
+        // x = x.role;
+        console.log(x + " -====== ROLE ---");
+        if (x == "regular") {
+            this.role_title = "Clients";
+            this.tab3Root = 'RegularUserPage';
+        }
+        else
+            this.role_title = "PT Finder";
+        this.tab3Root = 'RegularUserPage';
     }
-    WorkoutsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad WorkoutsPage');
+    TabsPage.prototype.ionViewDidLoad = function () {
     };
-    return WorkoutsPage;
+    return TabsPage;
 }());
-WorkoutsPage = __decorate([
+TabsPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
-        selector: 'page-workouts',template:/*ion-inline-start:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/workouts/workouts.html"*/'<!--\n  Generated template for the WorkoutsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="secondary">\n    <ion-title>Workouts</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n \n</ion-content>\n'/*ion-inline-end:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/workouts/workouts.html"*/,
+        selector: 'page-tabs',template:/*ion-inline-start:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/tabs/tabs.html"*/'<!--\n  Generated template for the TabsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-tabs  color="secondary" [selectedIndex]="myIndex">\n  <!-- <ion-tab *ngFor="let t of tabs" [root]="t.tabComponent" [tabTitle]="t.title" [tabIcon]="t.icon"></ion-tab> -->\n  <!-- <ion-tab [root]="DashboardPage" tabTitle="Home" tabIcon="home"></ion-tab> -->\n  <ion-tab  [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n\n  <ion-tab  [root]="tab2Root" tabTitle="Workouts" tabIcon="analytics"></ion-tab>\n\n  <ion-tab [root]="tab3Root" [tabTitle]="role_title" tabIcon="contacts"></ion-tab>\n  \n</ion-tabs>'/*ion-inline-end:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/tabs/tabs.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-], WorkoutsPage);
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__["a" /* Auth */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__["a" /* Auth */]) === "function" && _b || Object])
+], TabsPage);
 
-//# sourceMappingURL=workouts.js.map
+var _a, _b;
+//# sourceMappingURL=tabs.js.map
 
 /***/ })
 

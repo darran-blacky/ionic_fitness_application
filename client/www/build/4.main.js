@@ -1,14 +1,14 @@
 webpackJsonp([4],{
 
-/***/ 282:
+/***/ 284:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signup__ = __webpack_require__(104);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignupPageModule", function() { return SignupPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__side_menu__ = __webpack_require__(51);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SideMenuPageModule", function() { return SideMenuPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,26 +18,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SignupPageModule = (function () {
-    function SignupPageModule() {
+var SideMenuPageModule = (function () {
+    function SideMenuPageModule() {
     }
-    return SignupPageModule;
+    return SideMenuPageModule;
 }());
-SignupPageModule = __decorate([
+SideMenuPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__signup__["a" /* SignupPage */],
+            __WEBPACK_IMPORTED_MODULE_2__side_menu__["a" /* SideMenuPage */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__signup__["a" /* SignupPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__side_menu__["a" /* SideMenuPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__signup__["a" /* SignupPage */]
+            __WEBPACK_IMPORTED_MODULE_2__side_menu__["a" /* SideMenuPage */]
         ]
     })
-], SignupPageModule);
+], SideMenuPageModule);
 
-//# sourceMappingURL=signup.module.js.map
+//# sourceMappingURL=side-menu.module.js.map
 
 /***/ })
 

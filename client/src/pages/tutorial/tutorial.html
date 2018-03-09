@@ -8,7 +8,7 @@
   <ion-slides pager (ionSlideDidChange)="slideChanged()" (ionSlideDrag)="slideMoved()">
     <ion-slide>
       <div class="diag" style="background: url('assets/img/whitebg.svg') no-repeat">
-        <ion-icon ios="ios-analytics" md="md-analytics" color="secondary" [@bounce]='state' (@bounce.done)="animationDone()"></ion-icon>
+        <ion-icon ios="ios-analytics" md="md-analytics" class= "ion" [@bounce]='state' (@bounce.done)="animationDone()"></ion-icon>
       </div>
       <div [@bounce]='state'>
         <h2>Track your routine</h2>
@@ -17,7 +17,7 @@
     </ion-slide>
     <ion-slide>
       <div class="diag" style="background: url('assets/img/whitebg.svg') no-repeat">
-        <ion-icon ios="ios-trophy" md="md-trophy" color="secondary" [@bounce]='state'></ion-icon>
+        <ion-icon ios="ios-trophy" md="md-trophy" class= "ion" [@bounce]='state'></ion-icon>
       </div>
       <div [@bounce]='state'>
         <h2>set personal goals</h2>
@@ -26,7 +26,7 @@
     </ion-slide>
     <ion-slide>
       <div class="diag" style="background: url('assets/img/whitebg.svg') no-repeat">
-        <ion-icon ios="ios-chatboxes" md="md-chatboxes" color="secondary" [@bounce]='state'></ion-icon>
+        <ion-icon ios="ios-chatboxes" md="md-chatboxes" class= "ion" [@bounce]='state'></ion-icon>
       </div>
       <div [@bounce]='state'>
         <h2>chat with others</h2>

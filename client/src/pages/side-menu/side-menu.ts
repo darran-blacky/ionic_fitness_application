@@ -1,6 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Nav } from 'ionic-angular';
 import { TabsPage } from './../tabs/tabs';
+import { Auth } from '../../providers/auth/auth';
+import { MainPage } from '../main/main';
+
 /**
  * Generated class for the SideMenuPage page.
  *
@@ -23,6 +26,7 @@ export interface PageInterface {
 })
 
 export class SideMenuPage {
+  details : String;
   rootPage = 'TabsPage';
   
     pages: PageInterface[] = [
@@ -30,12 +34,13 @@ export class SideMenuPage {
       { title: 'Tab 2', pageName: 'TabsPage', tabComponent: 'Tab2Page', index: 1, icon: 'contacts' },
       { title: 'Tab 3', pageName: 'TabsPage', tabComponent: 'Tab3Page', index: 2, icon: 'clipboard' }
     ];
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+ 
+  
+  constructor(public navCtrl: NavController, public navParams: NavParams, public authService: Auth) {
+     this.details = authService.getUserDetails();
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SideMenuPage');
   }
 
   @ViewChild(Nav) nav: Nav;
@@ -75,4 +80,10 @@ export class SideMenuPage {
     }
     return;
   }
+  logout(){
+    
+       this.authService.logout();
+       this.navCtrl.setRoot(MainPage);
+    
+     }
 }

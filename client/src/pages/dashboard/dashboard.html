@@ -1,17 +1,28 @@
-<!--
-  Generated template for the DashboardPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
+    <ion-navbar color="secondary">
+          <ion-buttons start>
+              <button ion-button menuToggle>
+                    <ion-icon name="menu"></ion-icon>
+                  </button>
+             </ion-buttons>
     <ion-title>Dashboard</ion-title>
-  </ion-navbar>
+</ion-navbar>
 
 </ion-header>
-<ion-content padding>
+<ion-content >
   
-
+<ion-content id="homeContent" scroll="false" class="padding">
+    <div class="row" id="buttonsFirstWrapper">
+        <div class="col col-50"><img src="http://commercepromote.com/mobile-app/contacts_btn.png" (click)="test()"/></div>
+        <div class="col col-50"><img src="http://commercepromote.com/mobile-app/groups_btn.png" (click)="go_to_workouts()" /></div>
+    </div>
+    <div class="row">
+        <div class="col col-50">
+          <a href="javascript:void(0);"><img src="http://commercepromote.com/mobile-app/de_duplication_btn.png" /></a></div>
+        <div class="col col-50"><a href="javascript:void(0);"><img src="http://commercepromote.com/mobile-app/import_btn.png" /></a></div>
+    </div>
+    <div class="row">
+        <div class="col col-50"><a href="javascript:void(0);"><img src="http://commercepromote.com/mobile-app/export_btn.png" /></a></div>
+        <div class="col col-50"><a href="javascript:void(0);"><img src="http://commercepromote.com/mobile-app/configuration_btn.png" /></a></div>
+    </div>
 </ion-content>

@@ -67,33 +67,35 @@ export class TutorialPage {
   
   }
 
-export class HomePage {
+// export class HomePage {
  
- @ViewChild(Slides) slides: Slides;
-  skipMsg: string = "Skip";
-  state: string = 'x';
-  constructor(public navCtrl: NavController) {
+//  @ViewChild(Slides) slides: Slides;
+//   skipMsg: string = "Skip";
+//   state: string = 'x';
+//   constructor(public navCtrl: NavController) {
 
-  }
+//   }
 
-  skip() {
-    this.navCtrl.push(MainPage);
-  }
+  
 
-  slideChanged() {
-    if (this.slides.isEnd())
-      this.skipMsg = "Alright, I got it";
-  }
+//   skip() {
+//     this.navCtrl.push(MainPage);
+//   }
 
-  slideMoved() {
-    if (this.slides.getActiveIndex() >= this.slides.getPreviousIndex())
-      this.state = 'rightSwipe';
-    else
-      this.state = 'leftSwipe';
-  }
+//   slideChanged() {
+//     if (this.slides.isEnd())
+//       this.skipMsg = "Alright, I got it";
+//   }
 
-  animationDone() {
-    this.state = 'x';
-  }
+//   slideMoved() {
+//     if (this.slides.getActiveIndex() >= this.slides.getPreviousIndex())
+//       this.state = 'rightSwipe';
+//     else
+//       this.state = 'leftSwipe';
+//   }
 
-}
+//   animationDone() {
+//     this.state = 'x';
+//   }
+
+// }

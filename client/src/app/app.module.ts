@@ -23,6 +23,7 @@ import { WorkoutsPage } from '../pages/workouts/workouts'
 import { NutritionPage } from '../pages/nutrition/nutrition'
 
 import { RegularUserPageModule } from '../pages/regular-user/regular-user.module';
+import { WorkoutManagerProvider } from '../providers/workout-manager/workout-manager';
 
 // import { IonicPageModule } from 'ionic-angular/module';
 
@@ -61,7 +62,8 @@ import { RegularUserPageModule } from '../pages/regular-user/regular-user.module
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Todos,
-    Auth
+    Auth,
+    WorkoutManagerProvider
   ]
 })
 export class AppModule {}
