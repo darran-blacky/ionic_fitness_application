@@ -95,10 +95,9 @@ TabsPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
         selector: 'page-tabs',template:/*ion-inline-start:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/tabs/tabs.html"*/'<!--\n  Generated template for the TabsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-tabs  color="secondary" [selectedIndex]="myIndex">\n  <!-- <ion-tab *ngFor="let t of tabs" [root]="t.tabComponent" [tabTitle]="t.title" [tabIcon]="t.icon"></ion-tab> -->\n  <!-- <ion-tab [root]="DashboardPage" tabTitle="Home" tabIcon="home"></ion-tab> -->\n  <ion-tab  [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n\n  <ion-tab  [root]="tab2Root" tabTitle="Workouts" tabIcon="analytics"></ion-tab>\n\n  <ion-tab [root]="tab3Root" [tabTitle]="role_title" tabIcon="contacts"></ion-tab>\n  \n</ion-tabs>'/*ion-inline-end:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/tabs/tabs.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__["a" /* Auth */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__["a" /* Auth */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__["a" /* Auth */]])
 ], TabsPage);
 
-var _a, _b;
 //# sourceMappingURL=tabs.js.map
 
 /***/ })

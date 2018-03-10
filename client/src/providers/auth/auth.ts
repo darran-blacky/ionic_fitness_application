@@ -118,7 +118,7 @@ export class Auth {
       return JSON.parse(payload).email;      
     }
     else {
-      return "FAIL!!!" ; 
+      return "Couldn't get user name!!!" ; 
     }
    }
    getUserRole(){
@@ -130,7 +130,7 @@ export class Auth {
       return JSON.parse(payload).role;      
     }
     else {
-      return "FAIL!!!" ; 
+      return "Couldn't get user's role!!!!!!" ; 
     }
    }
  

@@ -18,15 +18,30 @@
 </ion-header>
 
 <ion-content>
-  
-   <ion-list>
+  <ion-card-header>
+    Workouts
+  </ion-card-header> 
+   <!-- <ion-list>
   
      <ion-item-sliding *ngFor="let name of names">
         <ion-item> 
-          <button ion-button color="secondary">{{name.title}}</button>   
+          <button ion-button color="secondary">Workout Name : {{name.workout.title}}</button>   
+          <button ion-button color="secondary">Workout User : {{name.workout.email}}</button>   
+        </ion-item>
+     </ion-item-sliding>
+  
+   </ion-list> -->
+   <ion-card-header>
+    Exercises
+  </ion-card-header> 
+     <button ion-button icon-only (click)="addExercise()"><ion-icon name="add"></ion-icon></button>
+  <ion-list>
+  
+     <ion-item-sliding *ngFor="let e of exercises">
+        <ion-item> 
+          <button ion-button color="secondary">{{e.title}}</button>   
         </ion-item>
      </ion-item-sliding>
   
    </ion-list>
-  
  </ion-content>
