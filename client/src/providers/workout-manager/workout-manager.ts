@@ -45,7 +45,7 @@ export class WorkoutManagerProvider {
            this.http.get('https://mfhserver.herokuapp.com/api/workouts/' + email_id, {headers: headers } )
              .map(res => res.json())
              .subscribe(data => {
-               resolve(data);
+               resolve(data.workout);
              }, (err) => {
                console.log("ERROR !!@!@,   " ,err)
                reject(err);
@@ -54,7 +54,7 @@ export class WorkoutManagerProvider {
       
        }
 
-       getWorkoutExercises(email_id){
+       getWorkoutExercises(workout_name){
         
            return new Promise((resolve, reject) => {
         
@@ -62,7 +62,7 @@ export class WorkoutManagerProvider {
              headers.append('Authorization', this.authService.token);
              
         //need to change to workouts
-             this.http.get('https://mfhserver.herokuapp.com/api/workouts/' + email_id, {headers: headers} )
+             this.http.get('https://mfhserver.herokuapp.com/api/workouts/' + workout_name, {headers: headers} )
                .map(res => res.json())
                .subscribe(data => {
                  resolve(data);
@@ -72,4 +72,23 @@ export class WorkoutManagerProvider {
            });
         
          }
+
+        getTester(email_id){
+          return new Promise((resolve, reject) => {
+            
+                 let headers = new Headers();
+                 headers.append('Authorization', this.authService.token);
+                //  headers.append('email', email_id);
+            
+            //need to change to workouts
+                 this.http.get('https://mfhserver.herokuapp.com/api/workouts/' + email_id, {headers: headers } )
+                   .subscribe(data => {
+                     let e =
+                     resolve(data);
+                   }, (err) => {
+                     console.log("ERROR !!@!@,   " ,err)
+                     reject(err);
+                   });
+        });
+      }
 }

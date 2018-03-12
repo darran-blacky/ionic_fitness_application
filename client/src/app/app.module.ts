@@ -1,29 +1,34 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
+
+/**   Modules  */
+import { IonicStorageModule } from '@ionic/storage'; 
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpModule } from '@angular/http';
+import { RegularUserPageModule } from '../pages/regular-user/regular-user.module';
+import { ErrorHandler, NgModule } from '@angular/core';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+
+/**   Pages    */
 import { HomePage } from '../pages/home/home';
 import { MainPage } from '../pages/main/main';
-import { IonicStorageModule } from '@ionic/storage'; 
-// import { Storage } from '@ionic/storage';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SideMenuPage } from '../pages/side-menu/side-menu'
+import { WorkoutsPage } from '../pages/workouts/workouts'
+import { NutritionPage } from '../pages/nutrition/nutrition'
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { SignupPage } from '../pages/signup/signup';
 import { RegularUserPage } from '../pages/regular-user/regular-user';
 import { PtUserPage } from '../pages/pt-user/pt-user';
-import { Todos } from '../providers/todos/todos';
-import { Auth } from '../providers/auth/auth';
-import { StorageProvider } from '../providers/storage/storage';
-import { HttpModule } from '@angular/http';
-import { SideMenuPage } from '../pages/side-menu/side-menu'
-import { WorkoutsPage } from '../pages/workouts/workouts'
-import { NutritionPage } from '../pages/nutrition/nutrition'
+import { WorkoutExercisesPage } from '../pages/workout-exercises/workout-exercises'
 
-import { RegularUserPageModule } from '../pages/regular-user/regular-user.module';
+/** Providers */
+import { Auth } from '../providers/auth/auth';
 import { WorkoutManagerProvider } from '../providers/workout-manager/workout-manager';
+import { StorageProvider } from '../providers/storage/storage';
+import { Todos } from '../providers/todos/todos';
 
 // import { IonicPageModule } from 'ionic-angular/module';
 
@@ -34,9 +39,10 @@ import { WorkoutManagerProvider } from '../providers/workout-manager/workout-man
     MainPage,
     TutorialPage,
     SignupPage,
-    // RegularUserPage,
     PtUserPage,
-    SideMenuPage
+    SideMenuPage,
+    WorkoutExercisesPage
+    
   ],
   imports: [
     BrowserModule,
@@ -55,7 +61,8 @@ import { WorkoutManagerProvider } from '../providers/workout-manager/workout-man
     SignupPage,
     RegularUserPage,
     PtUserPage,
-    SideMenuPage
+    SideMenuPage,
+    WorkoutExercisesPage
   ],
   providers: [
     StatusBar,
