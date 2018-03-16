@@ -18,9 +18,10 @@ export class WorkoutExercisesPage {
   exercises: any ;
   email: any;
 
+  t: any;
   constructor(public navCtrl: NavController, public navParams: NavParams,  public workoutService: WorkoutManagerProvider) {
     this.selected_workout = navParams.get("name");
-    this.exercises = navParams.get("exercises");
+    // this.exercises = navParams.get("exercises");
     this.email = navParams.get("email");
     
     
@@ -31,20 +32,18 @@ export class WorkoutExercisesPage {
     console.log('ionViewDidLoad WorkoutExercisesPage ' , this.selected_workout);
 
 
-    // this.workoutService.getWorkoutExercises(this.selected_workout).then((data) => {
-    //   //  this.names = data;
-    //   console.log("data getWorkoutExercises()===> : " , data);
+    this.workoutService.getWorkoutExercises(this.selected_workout).then((data) => {
+       this.exercises = data;
+      console.log("data 3---- ===> : " , data);
       
-    //   // for( var thing in data){
-    //   //   names.push(data.workout)
-    //   // }
-    //   }, (err) => {
-    //       console.log("not allowed : " , this.selected_workout);
-    //   });
+
+      }, (err) => {
+          console.log("not allowed : " , this.selected_workout);
+      });
 
       // console.log("workout name ",this.selected_workout);
-      console.log("workout exercises params ",this.exercises);
-      console.log("workout exercises params ",this.exercises[1]);
+      // console.log("workout exercises page *****_1_***** ",this.exercises);
+      // console.log("workout exercise page *****_2_*****  ", this.exercises[1].title);
       
   }
 

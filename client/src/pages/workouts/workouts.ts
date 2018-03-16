@@ -23,6 +23,7 @@ export class WorkoutsPage {
   email: any;
   exercises: any;
   test: any;
+  a: any;
   constructor(public navCtrl: NavController, public navParams: NavParams , public workoutService: WorkoutManagerProvider, public modalCtrl: ModalController,
     public alertCtrl: AlertController, public authService: Auth, public loadingCtrl: LoadingController ) {
       this.email = authService.getUserEmail();
@@ -33,18 +34,22 @@ export class WorkoutsPage {
 
     this.workoutService.getExercises().then((data) => {
         this.exercises = data;
-        console.log("get exercises ===-----....",data);
+        console.log("get exercises ===  ",data);
         
         }, (err) => {
             console.log("not allowed");
         });
 
-       
+        this.workoutService.getWorkoutExercises('Workout Test One').then((data) => {
+          console.log("get workout exercises first time with string == ",data);
+          
+          }, (err) => {
+              console.log("not allowed");
+          });
 
         this.workoutService.getWorkout(this.email).then((data) => {
           console.log("getWorkout ===-----....",data);
-          
-          
+
           this.names = data;
           }, (err) => {
               console.log("not allowed -----....",err);
@@ -59,11 +64,11 @@ export class WorkoutsPage {
   display(workout_page, e1){
 
     this.workoutService.getWorkoutExercises(workout_page).then((data) => {
+      console.log("get workout exercises 2nd time with params ",data);
       this.test = data;
-      console.log("get workout exercises ",data);
       
       }, (err) => {
-          console.log("not allowed");
+          console.log("not allowed" ,  err);
       });
     
 

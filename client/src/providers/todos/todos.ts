@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import { Auth } from '../auth/auth';
 import 'rxjs/add/operator/map';
- 
+import url from '../config';
+
 @Injectable()
 export class Todos {
- 
   constructor(public http: Http, public authService: Auth) {
  
   }
@@ -17,7 +17,7 @@ export class Todos {
       let headers = new Headers();
       headers.append('Authorization', this.authService.token);
  
-      this.http.get('https://mfhserver.herokuapp.com/api/todos', {headers: headers})
+      this.http.get('http://localhost:8202/api/todos', {headers: headers})
         .map(res => res.json())
         .subscribe(data => {
           resolve(data);
@@ -36,7 +36,7 @@ export class Todos {
       headers.append('Content-Type', 'application/json');
       headers.append('Authorization', this.authService.token);
     
-      this.http.post('https://mfhserver.herokuapp.com/api/todos', JSON.stringify(todo), {headers: headers})
+      this.http.post('http://localhost:8202/api/todos', JSON.stringify(todo), {headers: headers})
         .map(res => res.json())
         .subscribe(res => {
           resolve(res);
@@ -55,7 +55,7 @@ export class Todos {
         let headers = new Headers();
         headers.append('Authorization', this.authService.token);
  
-        this.http.delete('https://mfhserver.herokuapp.com/api/todos/' + id, {headers: headers}).subscribe((res) => {
+        this.http.delete('http://localhost:8202/api/todos/' + id, {headers: headers}).subscribe((res) => {
             resolve(res);
         }, (err) => {
             reject(err);
