@@ -53,10 +53,11 @@ export class MainPage {
   login(){
     
            this.showLoader();
-    
            let credentials = {
                email: this.email,
                password: this.password
+               
+               
            };
     
            this.authService.login(credentials).then((result) => {
@@ -65,7 +66,7 @@ export class MainPage {
                this.navCtrl.setRoot(SideMenuPage);
            }, (err) => {
                this.loading.dismiss();
-               console.log(err);
+               console.log("\n\n *****" +err+ "\n\n");
            });
     
        }

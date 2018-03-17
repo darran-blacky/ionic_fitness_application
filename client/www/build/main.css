@@ -24736,6 +24736,115 @@ ion-content {
   font-family: 'Raleway';
 }
 
+page-current-clients ion-card.card {
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+page-current-clients a, page-current-clients p,
+page-current-clients ion-card-header.card-header {
+  color: #fff !important;
+}
+
+page-current-clients .list > .item-block:first-child {
+  border: medium none;
+}
+
+page-current-clients .item {
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border: medium none;
+  color: white;
+}
+
+page-current-clients .item .text-input {
+  color: #fff;
+}
+
+page-current-clients .item input::-moz-placeholder {
+  color: #fff !important;
+}
+
+page-current-clients .item input:-moz-placeholder {
+  color: #fff !important;
+}
+
+page-current-clients .item *::-webkit-input-placeholder {
+  color: #fff !important;
+}
+
+page-current-clients .item *:-ms-input-placeholder {
+  color: #fff !important;
+}
+
+page-current-clients .item *:-moz-placeholder {
+  color: #fff !important;
+}
+
+page-current-clients .icon {
+  padding-right: 10px;
+}
+
+page-current-clients .bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+page-current-pt ion-card.card {
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+page-current-pt a, page-current-pt p,
+page-current-pt ion-card-header.card-header {
+  color: #fff !important;
+}
+
+page-current-pt .list > .item-block:first-child {
+  border: medium none;
+}
+
+page-current-pt .item {
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border: medium none;
+}
+
+page-current-pt .item .text-input {
+  color: #fff;
+}
+
+page-current-pt .item input::-moz-placeholder {
+  color: #fff !important;
+}
+
+page-current-pt .item input:-moz-placeholder {
+  color: #fff !important;
+}
+
+page-current-pt .item *::-webkit-input-placeholder {
+  color: #fff !important;
+}
+
+page-current-pt .item *:-ms-input-placeholder {
+  color: #fff !important;
+}
+
+page-current-pt .item *:-moz-placeholder {
+  color: #fff !important;
+}
+
+page-current-pt .icon {
+  padding-right: 10px;
+}
+
+page-current-pt .bottom {
+  position: absolute;
+  bottom: 0;
+}
+
 #welcome .background {
   color: white;
 }
@@ -25317,6 +25426,114 @@ page-main .icon {
 }
 
 page-main .bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+page-pt-finder ion-card.card {
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+page-pt-finder a, page-pt-finder p,
+page-pt-finder ion-card-header.card-header {
+  color: #fff !important;
+}
+
+page-pt-finder .list > .item-block:first-child {
+  border: medium none;
+}
+
+page-pt-finder .item {
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border: medium none;
+}
+
+page-pt-finder .item .text-input {
+  color: #fff;
+}
+
+page-pt-finder .item input::-moz-placeholder {
+  color: #fff !important;
+}
+
+page-pt-finder .item input:-moz-placeholder {
+  color: #fff !important;
+}
+
+page-pt-finder .item *::-webkit-input-placeholder {
+  color: #fff !important;
+}
+
+page-pt-finder .item *:-ms-input-placeholder {
+  color: #fff !important;
+}
+
+page-pt-finder .item *:-moz-placeholder {
+  color: #fff !important;
+}
+
+page-pt-finder .icon {
+  padding-right: 10px;
+}
+
+page-pt-finder .bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+page-pt-user ion-card.card {
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+page-pt-user a, page-pt-user p,
+page-pt-user ion-card-header.card-header {
+  color: #fff !important;
+}
+
+page-pt-user .list > .item-block:first-child {
+  border: medium none;
+}
+
+page-pt-user .item {
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border: medium none;
+}
+
+page-pt-user .item .text-input {
+  color: #fff;
+}
+
+page-pt-user .item input::-moz-placeholder {
+  color: #fff !important;
+}
+
+page-pt-user .item input:-moz-placeholder {
+  color: #fff !important;
+}
+
+page-pt-user .item *::-webkit-input-placeholder {
+  color: #fff !important;
+}
+
+page-pt-user .item *:-ms-input-placeholder {
+  color: #fff !important;
+}
+
+page-pt-user .item *:-moz-placeholder {
+  color: #fff !important;
+}
+
+page-pt-user .icon {
+  padding-right: 10px;
+}
+
+page-pt-user .bottom {
   position: absolute;
   bottom: 0;
 }

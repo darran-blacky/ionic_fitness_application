@@ -22,13 +22,21 @@ import { TutorialPage } from '../pages/tutorial/tutorial';
 import { SignupPage } from '../pages/signup/signup';
 import { RegularUserPage } from '../pages/regular-user/regular-user';
 import { PtUserPage } from '../pages/pt-user/pt-user';
-import { WorkoutExercisesPage } from '../pages/workout-exercises/workout-exercises'
+import { WorkoutExercisesPage } from '../pages/workout-exercises/workout-exercises';
+import { CurrentClientsPage} from '../pages/current-clients/current-clients';
+import { CurrentPtPage } from '../pages/current-pt/current-pt';
+import { PtFinderPage } from '../pages/pt-finder/pt-finder';
+import { ViewDealsPage } from '../pages/view-deals/view-deals';
+import { ManageDealsPage } from '../pages/manage-deals/manage-deals';
+import { ViewClientsPage } from '../pages/view-clients/view-clients';
+
 
 /** Providers */
 import { Auth } from '../providers/auth/auth';
 import { WorkoutManagerProvider } from '../providers/workout-manager/workout-manager';
 import { StorageProvider } from '../providers/storage/storage';
 import { Todos } from '../providers/todos/todos';
+import { TrainersProvider } from '../providers/trainers/trainers';
 
 // import { IonicPageModule } from 'ionic-angular/module';
 
@@ -41,7 +49,8 @@ import { Todos } from '../providers/todos/todos';
     SignupPage,
     PtUserPage,
     SideMenuPage,
-    WorkoutExercisesPage
+    WorkoutExercisesPage,
+    PtFinderPage
     
   ],
   imports: [
@@ -62,7 +71,9 @@ import { Todos } from '../providers/todos/todos';
     RegularUserPage,
     PtUserPage,
     SideMenuPage,
-    WorkoutExercisesPage
+    WorkoutExercisesPage,
+    PtFinderPage
+   
   ],
   providers: [
     StatusBar,
@@ -70,7 +81,8 @@ import { Todos } from '../providers/todos/todos';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Todos,
     Auth,
-    WorkoutManagerProvider
+    WorkoutManagerProvider,
+    TrainersProvider
   ]
 })
 export class AppModule {}

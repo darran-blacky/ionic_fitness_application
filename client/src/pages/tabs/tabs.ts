@@ -44,14 +44,16 @@ export class TabsPage {
     var x = this.authService.getUserRole();
     
         // x = x.role;
-        console.log(x + " -====== ROLE ---")
         if(x == "regular"){
-          this.role_title = "Clients";
-          this.tab3Root   ='RegularUserPage'
-        
-        }else
+          
           this.role_title = "PT Finder";
-          this.tab3Root   ='RegularUserPage'
+          this.tab3Root   = "CurrentPtPage";
+        
+        }else {
+        console.log(x + " -====== ROLE ---")
+          this.role_title = "Clients";
+          this.tab3Root   ="CurrentClientsPage";
+        }
   }
 
   ionViewDidLoad() {

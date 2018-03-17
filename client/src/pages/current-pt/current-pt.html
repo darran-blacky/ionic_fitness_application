@@ -1,0 +1,39 @@
+ 
+    <ion-header>
+        
+            <ion-navbar color="secondary">
+                <ion-buttons start>
+                    <button ion-button menuToggle>
+                          <ion-icon name="menu"></ion-icon>
+                        </button>
+                   </ion-buttons>
+                      <ion-title>Current Trainer</ion-title>
+            </ion-navbar>
+    </ion-header>
+  <ion-content>
+  
+          <ion-card>
+        
+            <ion-card-header>
+              Find a trainer
+            </ion-card-header>
+            
+            <ion-card-content>
+        
+              <ion-list no-line>
+        
+                <ion-item> 
+                    <ion-label color="white">Current Trainer : {{current}}</ion-label>
+                </ion-item>
+                <ion-item> 
+                   <button ion-button block outline color="White" (click)="search()">Search</button>            
+                </ion-item>
+          
+                
+              </ion-list>
+            </ion-card-content>
+          </ion-card>
+        </ion-content>
+        
+        
+        

@@ -7,14 +7,9 @@
 <ion-header>
     <ion-navbar color="secondary">
      <ion-title>
-       Todo Roles : (Personal Trainer)
+      Current Clients
      </ion-title>
-     <ion-buttons end>
-       <button ion-button icon-only (click)="addTodo()"><ion-icon name="add"></ion-icon></button>
-     </ion-buttons>
-     <ion-buttons start>
-       <button ion-button icon-only (click)="logout()"><ion-icon name="power"></ion-icon></button>
-     </ion-buttons>
+
     </ion-navbar>
    </ion-header>
     
@@ -22,18 +17,12 @@
     
      <ion-list no-lines>
     
-       <ion-item-sliding *ngFor="let todo of todos">
+       <ion-item-sliding *ngFor="let client of clients">
     
          <ion-item>
-           {{todo.title}}
+           {{client.email}}
          </ion-item>
-    
-         <ion-item-options>
-           <button ion-button color="danger" (click)="deleteTodo(todo)">
-             <ion-icon name="trash"></ion-icon>
-             Delete
-           </button>
-         </ion-item-options>
+
        </ion-item-sliding>
     
      </ion-list>

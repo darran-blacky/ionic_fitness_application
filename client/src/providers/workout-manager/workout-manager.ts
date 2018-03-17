@@ -80,22 +80,5 @@ export class WorkoutManagerProvider {
         
          }
 
-        getTester(email_id){
-          return new Promise((resolve, reject) => {
-            
-                 let headers = new Headers();
-                 headers.append('Authorization', this.authService.token);
-                //  headers.append('email', email_id);
-            
-            //need to change to workouts
-                 this.http.get('http://localhost:8202/api/workouts' + email_id, {headers: headers } )
-                   .subscribe(data => {
-                     let e =
-                     resolve(data);
-                   }, (err) => {
-                     console.log("ERROR !!@!@,   " ,err)
-                     reject(err);
-                   });
-        });
-      }
+
 }
