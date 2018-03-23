@@ -4,6 +4,7 @@ import { SignupPage } from '../signup/signup';
 import { Auth } from '../../providers/auth/auth'; 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SideMenuPage } from '../side-menu/side-menu'
+import { ToastController } from 'ionic-angular';
 
 /**
  * Generated class for the MainPage page.
@@ -26,7 +27,7 @@ export class MainPage {
    slideTwoForm: FormGroup; 
    submitAttempt: boolean = false;
 
-  constructor(public navCtrl: NavController, public formBuilder: FormBuilder,  public authService: Auth, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public formBuilder: FormBuilder,  public authService: Auth, public loadingCtrl: LoadingController,private toastCtrl: ToastController) {
    
     this.slideOneForm = formBuilder.group({
         email: ['', Validators.compose([Validators.maxLength(70), Validators.pattern('^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$'), Validators.required])],
@@ -56,15 +57,16 @@ export class MainPage {
            let credentials = {
                email: this.email,
                password: this.password
-               
-               
            };
     
            this.authService.login(credentials).then((result) => {
                this.loading.dismiss();
                console.log(result);
+               this.presentToast(1);
                this.navCtrl.setRoot(SideMenuPage);
            }, (err) => {
+            this.presentToast(0);
+            
                this.loading.dismiss();
                console.log("\n\n *****" +err+ "\n\n");
            });
@@ -84,5 +86,29 @@ export class MainPage {
            this.loading.present();
     
        }
-    
+
+       // need to import toast and add provider!!!!
+       presentToast(option) {
+           var message : any;
+           var duration : any;
+        if(option <= 0){
+            message = "Error Incorrect Username/Password"
+            duration = 3000 
+            
+        } else{
+            message  = "Successful login"
+            duration = 1500 
+        }
+        let toast = this.toastCtrl.create({
+          message: message,
+          duration: duration,
+          position: 'top'
+        });
+      
+        toast.onDidDismiss(() => {
+          console.log('Dismissed toast');
+        });
+        toast.setCssClass("my_toast");
+        toast.present();
+      }
    }

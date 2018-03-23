@@ -25538,6 +25538,81 @@ page-pt-user .bottom {
   bottom: 0;
 }
 
+page-regular-user ion-card.card {
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+page-regular-user ion-card-header.card-header {
+  color: white !important;
+}
+
+page-regular-user .item {
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border: medium none;
+  color: black;
+}
+
+page-regular-user .item .text-input {
+  color: green;
+}
+
+page-regular-user .item input::-moz-placeholder {
+  color: #fff !important;
+}
+
+page-regular-user .item input:-moz-placeholder {
+  color: #fff !important;
+}
+
+page-regular-user .item *::-webkit-input-placeholder {
+  color: #fff !important;
+}
+
+page-regular-user .item *:-ms-input-placeholder {
+  color: #fff !important;
+}
+
+page-regular-user .item *:-moz-placeholder {
+  color: #fff !important;
+}
+
+page-regular-user .icon {
+  padding-right: 10px;
+}
+
+page-regular-user .bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.l_item {
+  margin-bottom: 0px;
+  -moz-tab-size: 20px;
+  tab-size: 20px;
+}
+
+.my-class .alert-head {
+  background-color: gainsboro;
+  font-size: 20px;
+}
+
+.my-class .alert-message {
+  font-size: 20px;
+  color: darkolivegreens;
+}
+
+.ion-icon {
+  font-size: 10px;
+}
+
+.toast-container {
+  background-color: seagreen;
+  color: white;
+}
+
 signup-page .background {
   background-image: url("../assets/img/polygon-1.jpg");
 }

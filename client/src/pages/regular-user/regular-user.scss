@@ -1,3 +1,78 @@
 page-regular-user {
-
-}
+        
+                    
+                        ion-card.card {
+                            box-shadow: none;
+                            background: rgba(0, 0, 0, 0.5);
+                            border-radius: 5px;
+        
+                        }
+                    
+                      
+                        ion-card-header.card-header {
+                            color: white!important;
+                        }
+                    
+                     
+                        .item {
+                            margin-bottom: 10px;
+                            background: rgba(255, 255, 255, 0.5);
+                            border: medium none;
+                            color:black;
+                            .text-input, {
+                                color: green;
+                            }
+                    
+                            input::-moz-placeholder  {
+                                color: #fff!important;
+                            }
+                    
+                            input:-moz-placeholder {
+                                color: #fff!important;
+                            }
+                    
+                            *::-webkit-input-placeholder  {
+                                color: #fff!important;
+                            }
+                    
+                            *:-ms-input-placeholder  {
+                                color: #fff!important;
+                            }
+                    
+                            *:-moz-placeholder  {
+                                color: #fff!important;
+                            }
+                        }
+                    
+                        .icon {
+                            padding-right: 10px;
+                        }
+                    
+                        .bottom {
+                            position: absolute;
+                            bottom: 0;
+                        }
+                    }
+                    .l_item{
+                        margin-bottom: 0px;
+                        tab-size: 20px;
+                    }
+                    .my-class {
+                        .alert-head {
+                        background-color : gainsboro;
+                        font-size: 20px;
+                        }
+                        .alert-message {
+                        font-size: 20px;
+                        color: darkolivegreens;
+                        }
+                        
+                        }
+                        .ion-icon {
+                            font-size: 10px; //Preferred size here
+                        }
+                    
+                        .toast-container{
+                            background-color: seagreen;
+                            color: white;
+                            }

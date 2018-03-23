@@ -12,32 +12,52 @@
           </button>
      </ion-buttons>
      <ion-title>
-       Todo Roles
+       Current Offers
      </ion-title>
      <ion-buttons end>
-       <button ion-button icon-only (click)="addTodo()"><ion-icon name="add"></ion-icon></button>
+       <button ion-button icon-only (click)="addOffer()"><ion-icon name="add"></ion-icon></button>
      </ion-buttons>
     </ion-navbar>
    </ion-header>
     
    <ion-content>
-    
-     <ion-list no-lines>
-    
-       <ion-item-sliding *ngFor="let todo of todos">
-    
-         <ion-item>
-           {{todo.title}} : {{todo.name}}
-         </ion-item>
-    
-         <ion-item-options>
-           <button ion-button color="danger" (click)="deleteTodo(todo)">
-             <ion-icon name="trash"></ion-icon>
-             Delete
-           </button>
-         </ion-item-options>
+      
+   <ion-card>
+      
+
+   <ion-card-header>
+     Packages Manager
+     <ion-buttons end>
+        <button ion-button icon-only (click)="addOffer()"><ion-icon name="add"></ion-icon></button>
+      </ion-buttons>
+   </ion-card-header>
+
+   <ion-card-content>
+       
+   <ion-list no-lines >
+
+      <ion-item-sliding *ngFor="let offer of offers">
+       <ion-item>
+          <ion-card-content class= "l_item">
+              
+          <span>{{offer.title}}:</span><br>
+          <span>Posted by : {{offer.name}} </span><br>
+          <span>Price : €{{offer.price}} </span><br> 
+      </ion-card-content>
+      
+       </ion-item>
+       <ion-item-options>
+        
+          <button ion-button icon-only large color="danger" (click)="deleteOffer(offer)">
+            <ion-icon name="trash"></ion-icon>
+          </button>
+        </ion-item-options>
+      
        </ion-item-sliding>
-    
-     </ion-list>
-    
-   </ion-content>
+      </ion-list>
+   </ion-card-content>
+</ion-card>
+
+</ion-content>
+
+

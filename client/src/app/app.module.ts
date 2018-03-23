@@ -35,7 +35,7 @@ import { ViewClientsPage } from '../pages/view-clients/view-clients';
 import { Auth } from '../providers/auth/auth';
 import { WorkoutManagerProvider } from '../providers/workout-manager/workout-manager';
 import { StorageProvider } from '../providers/storage/storage';
-import { Todos } from '../providers/todos/todos';
+import { Offers } from '../providers/offers/offers';
 import { TrainersProvider } from '../providers/trainers/trainers';
 
 // import { IonicPageModule } from 'ionic-angular/module';
@@ -50,7 +50,8 @@ import { TrainersProvider } from '../providers/trainers/trainers';
     PtUserPage,
     SideMenuPage,
     WorkoutExercisesPage,
-    PtFinderPage
+    PtFinderPage,
+    ManageDealsPage
     
   ],
   imports: [
@@ -72,14 +73,15 @@ import { TrainersProvider } from '../providers/trainers/trainers';
     PtUserPage,
     SideMenuPage,
     WorkoutExercisesPage,
-    PtFinderPage
+    PtFinderPage,
+    ManageDealsPage
    
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Todos,
+    Offers,
     Auth,
     WorkoutManagerProvider,
     TrainersProvider

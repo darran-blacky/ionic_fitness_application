@@ -1,8 +1,10 @@
 import { Component } from "@angular/core";
 import { NavController,IonicPage, ModalController, AlertController, LoadingController } from 'ionic-angular';
-import { Todos } from '../../providers/todos/todos';
+import { Offers } from '../../providers/offers/offers';
 import { Auth } from '../../providers/auth/auth';
 import { MainPage } from '../main/main';
+import { ToastController } from 'ionic-angular';
+
 /**
  * Generated class for the RegularUserPage page.
  *
@@ -16,60 +18,72 @@ import { MainPage } from '../main/main';
 })
 export class RegularUserPage {
 
-  todos: any;
+  offers: any;
   loading: any;
   userDetails: any;
-  new_todo: any;
+  new_offer: any;
 
-  constructor(public navCtrl: NavController, public todoService: Todos, public modalCtrl: ModalController,
-    public alertCtrl: AlertController, public authService: Auth, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public offerService: Offers, public modalCtrl: ModalController,
+    public alertCtrl: AlertController, public authService: Auth, public loadingCtrl: LoadingController,private toastCtrl: ToastController) {
      this.userDetails = authService.getUserEmail();
   }
  
   ionViewDidLoad(){
  
-    this.todoService.getTodos().then((data) => {
-          this.todos = data;
+    this.offerService.getOffers().then((data) => {
+      console.log(" offers data == ", data);
+      console.log(" offers data == ", data);
+     
+          this.offers = data;
     }, (err) => {
         console.log("not allowed");
     });
  
   }
  
-  addTodo(){
+  addOffer(){
  
     let prompt = this.alertCtrl.create({
-      title: 'Add Todo',
-      message: 'Describe your todo below:',
+      title: 'Add Offer',
+      message: 'Describe your offer below:',
       inputs: [
         {
-          name: 'title'
+          name: 'title',
+          placeholder: 'Description'
+        },
+        {
+          name: 'price',
+          placeholder: 'Price'
+          
         }
       ],
       buttons: [
         {
-          text: 'Cancel'
+          text: 'Cancel',
         },
         {
           text: 'Save',
-          handler: todo => {
-                if(todo){
+          handler: offer => {
+                if(offer){
                  
-                  this.new_todo = {
-                        title: todo.title,
-                        name: this.userDetails
+                  this.new_offer = {
+                        title: offer.title,
+                        name: this.userDetails,
+                        price: offer.price
                   }
 
-                console.log("SAVE TODO : -------> ", todo.title)
+                console.log("SAVE OFFER : -------> ", offer.title)
           
                     this.showLoader();
                     
-                    this.todoService.createTodo(this.new_todo).then((result) => {
-                      console.log("todo === " , this.new_todo);
+                    this.offerService.createOffer(this.new_offer).then((result) => {
+                      console.log("offer === " , this.new_offer);
                       
                         this.loading.dismiss();
-                        this.todos = result;
-                        console.log("todo created : " , result);
+                        this.offers = result;
+                        this.presentToast(0);
+      
+                        console.log("offer created : " , result);
                     }, (err) => {
                         this.loading.dismiss();
                        
@@ -80,27 +94,28 @@ export class RegularUserPage {
  
           }
         }
-      ]
+      ],
+      cssClass: "my-class"
     });
- 
+    
     prompt.present();
  
   }
  
-  deleteTodo(todo){
+  deleteOffer(offer){
  
     this.showLoader();
  
     //Remove from database
-    this.todoService.deleteTodo(todo._id).then((result) => {
+    this.offerService.deleteOffer(offer._id).then((result) => {
  
       this.loading.dismiss();
- 
+      this.presentToast(1);
       //Remove locally
-        let index = this.todos.indexOf(todo);
+        let index = this.offers.indexOf(offer);
  
         if(index > -1){
-            this.todos.splice(index, 1);
+            this.offers.splice(index, 1);
         }  
  
     }, (err) => {
@@ -124,6 +139,29 @@ export class RegularUserPage {
     this.authService.logout();
     this.navCtrl.setRoot(MainPage);
  
+  }
+
+
+
+  
+  presentToast(option) {
+    var toast_message : any;
+    if(option >= 1 ){
+      toast_message = 'Offer was removed successfully'
+    }else{
+      toast_message = 'Offer was added successfully'      
+    }
+    let toast = this.toastCtrl.create({
+      message: toast_message,
+      duration: 3000,
+      position: 'top'
+    });
+  
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
+    toast.setCssClass("my_toast");
+    toast.present();
   }
  
 }

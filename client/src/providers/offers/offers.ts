@@ -5,19 +5,19 @@ import 'rxjs/add/operator/map';
 import url from '../config';
 
 @Injectable()
-export class Todos {
+export class Offers {
   constructor(public http: Http, public authService: Auth) {
  
   }
  
-  getTodos(){
+  getOffers(){
  
     return new Promise((resolve, reject) => {
  
       let headers = new Headers();
       headers.append('Authorization', this.authService.token);
  
-      this.http.get('http://localhost:8202/api/todos', {headers: headers})
+      this.http.get('http://localhost:8202/api/offers', {headers: headers})
         .map(res => res.json())
         .subscribe(data => {
           resolve(data);
@@ -28,7 +28,7 @@ export class Todos {
  
   }
  
-  createTodo(todo){
+  createOffer(offer){
  
     return new Promise((resolve, reject) => {
  
@@ -36,7 +36,7 @@ export class Todos {
       headers.append('Content-Type', 'application/json');
       headers.append('Authorization', this.authService.token);
     
-      this.http.post('http://localhost:8202/api/todos', JSON.stringify(todo), {headers: headers})
+      this.http.post('http://localhost:8202/api/offers', JSON.stringify(offer), {headers: headers})
         .map(res => res.json())
         .subscribe(res => {
           resolve(res);
@@ -48,14 +48,14 @@ export class Todos {
  
   }
  
-  deleteTodo(id){
+  deleteOffer(id){
  
     return new Promise((resolve, reject) => {
  
         let headers = new Headers();
         headers.append('Authorization', this.authService.token);
  
-        this.http.delete('http://localhost:8202/api/todos/' + id, {headers: headers}).subscribe((res) => {
+        this.http.delete('http://localhost:8202/api/offers/' + id, {headers: headers}).subscribe((res) => {
             resolve(res);
         }, (err) => {
             reject(err);

@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PtUserPage } from '../pt-user/pt-user'
 import { TrainersProvider } from '../../providers/trainers/trainers'
 import { Auth } from '../../providers/auth/auth';
+import { ManageDealsPage } from '../manage-deals/manage-deals';
+
 /**
  * Generated class for the CurrentClientsPage page.
  *
@@ -25,5 +27,9 @@ export class CurrentClientsPage {
 
   clients(){
     this.navCtrl.setRoot(PtUserPage);
+  }
+
+  manage(){
+    this.navCtrl.setRoot(ManageDealsPage);
   }
 }
