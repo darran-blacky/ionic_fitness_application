@@ -12,11 +12,8 @@
           </button>
      </ion-buttons>
      <ion-title>
-       Current Offers
+       Offers
      </ion-title>
-     <ion-buttons end>
-       <button ion-button icon-only (click)="addOffer()"><ion-icon name="add"></ion-icon></button>
-     </ion-buttons>
     </ion-navbar>
    </ion-header>
     
@@ -26,10 +23,7 @@
       
 
    <ion-card-header>
-     Packages Manager
-     <ion-buttons end>
-        <button ion-button icon-only (click)="addOffer()"><ion-icon name="add"></ion-icon></button>
-      </ion-buttons>
+     Packages available for 
    </ion-card-header>
 
    <ion-card-content>
@@ -39,17 +33,15 @@
       <ion-item-sliding *ngFor="let offer of offers">
        <ion-item>
           <ion-card-content class= "l_item">
-              
           <span>{{offer.title}}:</span><br>
-          <span>Posted by : {{offer.name}} </span><br>
           <span>Price : €{{offer.price}} </span><br> 
       </ion-card-content>
       
        </ion-item>
        <ion-item-options>
         
-          <button ion-button icon-only large color="danger" (click)="deleteOffer(offer)">
-            <ion-icon name="trash"></ion-icon>
+          <button ion-button icon-only large color="primary" (click)="message(offer)">
+            <ion-icon name="chatboxes"></ion-icon>
           </button>
         </ion-item-options>
       

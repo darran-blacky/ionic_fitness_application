@@ -6,18 +6,18 @@
 		</ion-card-header>
 		<p *ngIf="submitAttempt" style="color: #ea6153;">Please fill out all details accurately.</p>
 		
-		<ion-card-content>
+		<ion-card-content >
 			<ion-list no-line>
 				<form [formGroup]="slideOneForm">	
-						<ion-item>
-							<ion-label color="white" floating>Email</ion-label>
-							<ion-input formControlName="email" [(ngModel)]="email" type="text" [class.invalid]="!slideOneForm.controls.email.valid && (slideOneForm.controls.email.dirty || submitAttempt)"></ion-input>
+						<ion-item class="md">
+							<ion-label floating>Email</ion-label>
+							<ion-input color="red" formControlName="email" [(ngModel)]="email" type="text" [class.invalid]="!slideOneForm.controls.email.valid && (slideOneForm.controls.email.dirty || submitAttempt)"></ion-input>
 						</ion-item>
 						<ion-item *ngIf="!slideOneForm.controls.email.valid  && (slideOneForm.controls.email.dirty || submitAttempt)">
 								<p>Please enter a valid name.</p>
 						</ion-item>
-						<ion-item>
-							<ion-label color="white"  floating>Password</ion-label>								
+						<ion-item class="md" color="orange">
+							<ion-label floating>Password</ion-label>								
 							<ion-input type="password" [(ngModel)]="password" formControlName="password"></ion-input>
 						</ion-item>
 						<button ion-button block outline color="light" (click)="login()">Log in</button>

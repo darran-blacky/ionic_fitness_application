@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http , Headers  } from '@angular/http';
 import { Auth } from '../auth/auth';
 import 'rxjs/add/operator/map';
+import { url } from '../config';
 
 /*
   Generated class for the TrainersProvider provider.
@@ -12,8 +13,12 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class TrainersProvider {
 
+  public URL : any ;
+  
   constructor(public http: Http, public authService: Auth) {
     console.log('Hello TrainersProvider Provider');
+    this.URL = url.toString();
+    
   }
 
  getAvailableCoaches(){
@@ -22,7 +27,7 @@ export class TrainersProvider {
          let headers = new Headers();
          headers.append('Authorization', this.authService.token);
          
-         this.http.get('http://localhost:8202/api/coaches/', {headers: headers} )
+         this.http.get( this.URL +'api/coaches/', {headers: headers} )
          .map(res => res.json())
          .subscribe(data => {
           
@@ -40,7 +45,7 @@ export class TrainersProvider {
       let headers = new Headers();
       headers.append('Authorization', this.authService.token);
       
-      this.http.get('http://localhost:8202/api/client/' + email, {headers: headers} )
+      this.http.get( this.URL +'api/client/' + email, {headers: headers} )
       .map(res => res.json())
       .subscribe(data => {
        
@@ -58,7 +63,7 @@ getCurrentClient(id){
     let headers = new Headers();
     headers.append('Authorization', this.authService.token);
     
-    this.http.get('http://localhost:8202/api/trainer/' + id, {headers: headers} )
+    this.http.get( this.URL +'api/trainer/' + id, {headers: headers} )
     .map(res => res.json())
     .subscribe(data => {
      

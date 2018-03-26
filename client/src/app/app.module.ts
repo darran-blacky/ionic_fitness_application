@@ -56,7 +56,10 @@ import { TrainersProvider } from '../providers/trainers/trainers';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {
+      scrollAssist: false,
+      autoFocusAssit: false
+    }),
     IonicStorageModule.forRoot(), 
     BrowserAnimationsModule,
     HttpModule,

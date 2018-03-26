@@ -24755,7 +24755,6 @@ page-current-clients .item {
   margin-bottom: 10px;
   background: rgba(255, 255, 255, 0.5);
   border: medium none;
-  color: white;
 }
 
 page-current-clients .item .text-input {
@@ -25430,6 +25429,22 @@ page-main .bottom {
   bottom: 0;
 }
 
+page-main .md {
+  color: white;
+}
+
+page-main .text-input.md {
+  color: white;
+}
+
+page-main .label-md-text-color {
+  color: white;
+}
+
+page-main .text-input-md {
+  color: red;
+}
+
 page-pt-finder ion-card.card {
   box-shadow: none;
   background: rgba(0, 0, 0, 0.5);
@@ -25703,10 +25718,9 @@ signup-page .custom-icon {
 
 .diag {
   position: absolute;
-  z-index: 1;
   width: 100%;
   top: 0;
-  height: 66%;
+  height: 100%;
 }
 
 ion-icon {

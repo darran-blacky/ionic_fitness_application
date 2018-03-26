@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Auth } from '../../providers/auth/auth';
 import { TrainersProvider } from '../../providers/trainers/trainers'
+import { ManageDealsPage } from '../manage-deals/manage-deals';
+import { RegularUserPage } from '../regular-user/regular-user';
 
 /**
  * Generated class for the PtFinderPage page.
@@ -16,12 +18,14 @@ import { TrainersProvider } from '../../providers/trainers/trainers'
 })
 export class PtFinderPage {
   trainers: any
+  userDetails: any
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public authService: Auth,public trainerService : TrainersProvider) {
+    this.userDetails = navParams.get("name");  
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PtFinderPage');
-
 
     this.trainerService.getAvailableCoaches().then((data) => {
       this.trainers = data;
@@ -29,5 +33,14 @@ export class PtFinderPage {
      }, (err) => {
          console.log("not allowed : " );
      });
+  }
+
+  viewDeals(trainer){
+    console.log(" trainers ---- ===> : " , trainer);
+
+    this.navCtrl.push(RegularUserPage, {
+      name: trainer
+      
+    })
   }
 }

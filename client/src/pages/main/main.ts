@@ -91,11 +91,12 @@ export class MainPage {
        presentToast(option) {
            var message : any;
            var duration : any;
+           
         if(option <= 0){
             message = "Error Incorrect Username/Password"
             duration = 3000 
-            
-        } else{
+        } 
+        else{
             message  = "Successful login"
             duration = 1500 
         }

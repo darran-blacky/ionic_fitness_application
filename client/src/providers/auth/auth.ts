@@ -2,15 +2,17 @@ import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import { Storage } from '@ionic/storage';
 import 'rxjs/add/operator/map';
-import  url from '../config';
+import { url } from '../config';
 
 
 @Injectable()
 export class Auth {
   public token: any;
+  public URL : any ;
   public current_user: any;
   constructor(public http: Http, private storage: Storage) {
 //  , public storage: Storage
+     this.URL = url.toString();
   }
  
   checkAuthentication(){
@@ -28,7 +30,7 @@ export class Auth {
             let headers = new Headers();
             headers.append('Authorization', this.token);
  
-            this.http.get('http://localhost:8202/api/auth/protected', {headers: headers})
+            this.http.get( this.URL +'/api/auth/protected', {headers: headers})
                 .subscribe(res => {
                     resolve(res);
                 }, (err) => {
@@ -48,7 +50,7 @@ export class Auth {
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
  
-        this.http.post('http://localhost:8202/api/auth/register', JSON.stringify(details), {headers: headers})
+        this.http.post( this.URL +'/api/auth/register', JSON.stringify(details), {headers: headers})
           .subscribe(res => {
  
             let data = res.json();
@@ -72,8 +74,8 @@ export class Auth {
  
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
-   
-        this.http.post('http://localhost:8202/api/auth/login', JSON.stringify(credentials), {headers: headers})
+       
+        this.http.post( this.URL +'api/auth/login', JSON.stringify(credentials), {headers: headers})
           .subscribe(res => {
             this.current_user = credentials.email;
             let data = res.json();

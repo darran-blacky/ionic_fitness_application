@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Auth } from '../auth/auth';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
-import url from '../config';
+import { url } from '../config';
 
 /*
   Generated class for the WorkoutManagerProvider provider.
@@ -12,8 +12,12 @@ import url from '../config';
 */
 @Injectable()
 export class WorkoutManagerProvider {
+  public URL : any ;
+  
+
   constructor(public http: Http, public authService: Auth ) {
     console.log('Hello WorkoutManagerProvider Provider');
+    this.URL = url.toString();
   }
 
   getExercises(){
@@ -23,7 +27,7 @@ export class WorkoutManagerProvider {
          let headers = new Headers();
          headers.append('Authorization', this.authService.token);
     //need to change to exercises
-         this.http.get('http://localhost:8202/api/exercises', {headers: headers})
+         this.http.get( this.URL +'api/exercises', {headers: headers})
            .map(res => res.json())
            .subscribe(data => {
              resolve(data);
@@ -42,12 +46,12 @@ export class WorkoutManagerProvider {
           //  headers.append('email', email_id);
       
       //need to change to workouts
-           this.http.get('http://localhost:8202/api/workouts/' + email_id, {headers: headers } )
+           this.http.get( this.URL +'api/workouts/' + email_id, {headers: headers } )
              .map(res => res.json())
              .subscribe(data => {
                resolve(data.workout);
              }, (err) => {
-               console.log("ERROR !!@!@,   " ,err)
+               console.log("ERROR !!@!@,   " , err)
                reject(err);
              });
          });
@@ -62,7 +66,7 @@ export class WorkoutManagerProvider {
              headers.append('Authorization', this.authService.token);
              
         //need to change to workouts
-             this.http.get('http://localhost:8202/api/workouts/exercises/' + workout_name, {headers: headers} )
+             this.http.get( this.URL +'api/workouts/exercises/' + workout_name, {headers: headers} )
              .map(res => res.json())
              .subscribe(data => {
               console.log("\n\n data  : " + data + "\n\n");

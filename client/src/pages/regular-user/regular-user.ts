@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { NavController,IonicPage, ModalController, AlertController, LoadingController } from 'ionic-angular';
+import { NavController,NavParams,IonicPage, ModalController, AlertController, LoadingController } from 'ionic-angular';
 import { Offers } from '../../providers/offers/offers';
 import { Auth } from '../../providers/auth/auth';
 import { MainPage } from '../main/main';
@@ -22,15 +22,24 @@ export class RegularUserPage {
   loading: any;
   userDetails: any;
   new_offer: any;
+  v: any;
 
-  constructor(public navCtrl: NavController, public offerService: Offers, public modalCtrl: ModalController,
+  constructor(public navCtrl: NavController, public navParams: NavParams, public offerService: Offers, public modalCtrl: ModalController,
     public alertCtrl: AlertController, public authService: Auth, public loadingCtrl: LoadingController,private toastCtrl: ToastController) {
-     this.userDetails = authService.getUserEmail();
+   
+    //  if(navParams.get("name") != null){
+    //    this.userDetails = navParams.get("name");
+
+    //  }else{
+      this.userDetails = navParams.get("name");
+      
+    //  }
+
   }
  
   ionViewDidLoad(){
  
-    this.offerService.getOffers().then((data) => {
+    this.offerService.getOffers(this.userDetails).then((data) => {
       console.log(" offers data == ", data);
       console.log(" offers data == ", data);
      
@@ -41,7 +50,7 @@ export class RegularUserPage {
  
   }
  
-  addOffer(){
+  message(user){
  
     let prompt = this.alertCtrl.create({
       title: 'Add Offer',
@@ -72,22 +81,22 @@ export class RegularUserPage {
                         price: offer.price
                   }
 
-                console.log("SAVE OFFER : -------> ", offer.title)
+                console.log("WORKOUT Bought : -------> ", offer.title)
           
-                    this.showLoader();
+                    // this.showLoader();
                     
-                    this.offerService.createOffer(this.new_offer).then((result) => {
-                      console.log("offer === " , this.new_offer);
+                    // this.offerService.createOffer(this.new_offer).then((result) => {
+                    //   console.log("offer === " , this.new_offer);
                       
-                        this.loading.dismiss();
-                        this.offers = result;
-                        this.presentToast(0);
+                    //     this.loading.dismiss();
+                    //     this.offers = result;
+                    //     this.presentToast(0);
       
-                        console.log("offer created : " , result);
-                    }, (err) => {
-                        this.loading.dismiss();
+                    //     console.log("offer created : " , result);
+                    // }, (err) => {
+                    //     this.loading.dismiss();
                        
-                    });
+                    // });
  
                 }
  
@@ -100,28 +109,6 @@ export class RegularUserPage {
     
     prompt.present();
  
-  }
- 
-  deleteOffer(offer){
- 
-    this.showLoader();
- 
-    //Remove from database
-    this.offerService.deleteOffer(offer._id).then((result) => {
- 
-      this.loading.dismiss();
-      this.presentToast(1);
-      //Remove locally
-        let index = this.offers.indexOf(offer);
- 
-        if(index > -1){
-            this.offers.splice(index, 1);
-        }  
- 
-    }, (err) => {
-      this.loading.dismiss();
-        console.log("not allowed");
-    });
   }
  
   showLoader(){

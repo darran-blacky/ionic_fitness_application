@@ -52,7 +52,7 @@ export class TabsPage {
         }else {
         console.log(x + " -====== ROLE ---")
           this.role_title = "Clients";
-          this.tab3Root   ="CurrentClientsPage";
+          this.tab3Root   = "CurrentClientsPage";
         }
   }
 
