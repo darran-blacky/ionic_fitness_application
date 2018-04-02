@@ -22,13 +22,25 @@
         
 				<ion-item class="floating_">
           <ion-label ><ion-icon small custom-icon name="lock"></ion-icon></ion-label>
-					<ion-input floating type="password" placeholder="Password"></ion-input>
+					<ion-input floating type="password" [(ngModel)]="password" placeholder="Password"></ion-input>
         </ion-item>
-        
+
         <ion-item class="floating_">
-          <ion-input type="password" placeholder="Confirm Password" [(ngModel)]="password"></ion-input>
+          <ion-input type="number" placeholder="Age"[(ngModel)]="age" ></ion-input>
         </ion-item>
-    
+
+        <ion-item class="floating_">
+          <ion-input type="number" placeholder="Weight" [(ngModel)]="weight" ></ion-input>
+        </ion-item>
+ <ion-item id=custom-pop>
+        <ion-label color="Black">Fitness Goals</ion-label>
+        <ion-select [(ngModel)]="goals">
+            <ion-option value="lose">Lose Weight / Tone Up </ion-option>
+            <ion-option value="maintain">Maintain Weight</ion-option>
+            <ion-option value="build">Build Muscle / Bulk </ion-option>
+        </ion-select>
+      </ion-item>
+
         <ion-item id=custom-pop>
 
           <ion-label color="Black">Account Type</ion-label>

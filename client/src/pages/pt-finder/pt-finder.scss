@@ -71,5 +71,12 @@ page-pt-finder {
             border-radius: 50%;
         }
 
+       
+        .item-ios ion-avatar ion-img, .item-ios ion-avatar img {
+            border-radius: 20%;
+            overflow: hidden;
+            width: 100px;
+            height: 100px;
+        }
     }
     

@@ -1,14 +1,14 @@
 webpackJsonp([13],{
 
-/***/ 286:
+/***/ 291:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__create_workout__ = __webpack_require__(208);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreateWorkoutPageModule", function() { return CreateWorkoutPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__manage_deals__ = __webpack_require__(211);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ManageDealsPageModule", function() { return ManageDealsPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,26 +18,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CreateWorkoutPageModule = (function () {
-    function CreateWorkoutPageModule() {
+var ManageDealsPageModule = (function () {
+    function ManageDealsPageModule() {
     }
-    return CreateWorkoutPageModule;
+    return ManageDealsPageModule;
 }());
-CreateWorkoutPageModule = __decorate([
+ManageDealsPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__create_workout__["a" /* CreateWorkoutPage */],
+            __WEBPACK_IMPORTED_MODULE_2__manage_deals__["a" /* ManageDealsPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__create_workout__["a" /* CreateWorkoutPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__manage_deals__["a" /* ManageDealsPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__create_workout__["a" /* CreateWorkoutPage */]
+            __WEBPACK_IMPORTED_MODULE_2__manage_deals__["a" /* ManageDealsPage */]
         ]
     })
-], CreateWorkoutPageModule);
+], ManageDealsPageModule);
 
-//# sourceMappingURL=create-workout.module.js.map
+//# sourceMappingURL=manage-deals.module.js.map
 
 /***/ })
 

@@ -5,14 +5,13 @@
 
       <ion-item class="item-profile" >
           <div class="item-avatar">
-            <img  class="circle-pic" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973461_1280.png">
+            <img  class="circle-pic" src="{{details.img}}">
           </div>
       </ion-item>
      
       <ion-item class="title_1">
          <b>{{details.name}}</b>
       </ion-item>
-<br>
 <ion-item class="title_1">
  </ion-item>
       <ion-item class="sub_title">
@@ -22,6 +21,11 @@
       <ion-item class="sub_title">
           <ion-icon small class="i" name="mail"> <b>Email : </b>  {{details.email}} </ion-icon>
       </ion-item>
+      <ion-item class="sub_title">
+        <ion-icon small class="i" name="mail"> <b>Weight : </b>  {{details.weight}}Kg </ion-icon>
+    </ion-item>
+    <button class="side_button" ion-button color="secondary" (click)="update()">Update Profile </button>
+      
     <button class="side_button" ion-button block outline color="light" (click)="logout()">Log Out </button>
 
 

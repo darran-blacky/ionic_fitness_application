@@ -25,11 +25,11 @@
               <ion-list>
                       <ion-item  *ngFor="let trainer of trainers" (click)="viewDeals(trainer.email)">
                         <ion-avatar item-left>
-                          <img  src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973461_1280.png">
+                          <img  src="{{trainer.img}}">
                         </ion-avatar>
                         
-                        <h2>{{trainer.name}}</h2>
-                        <p>{{trainer.email}}</p>
+                        <h1>{{trainer.name}}</h1>
+                        <h2>{{trainer.email}}</h2>
                       </ion-item>
               </ion-list>
                 

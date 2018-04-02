@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams, Nav } from 'ionic-angular';
 import { TabsPage } from './../tabs/tabs';
 import { Auth } from '../../providers/auth/auth';
 import { MainPage } from '../main/main';
-
+import { ProfilePage } from '../profile/profile';
 /**
  * Generated class for the SideMenuPage page.
  *
@@ -26,7 +26,9 @@ export interface PageInterface {
 })
 
 export class SideMenuPage {
+  email: any;
   details : any;
+  
   rootPage = 'TabsPage';
     pages: PageInterface[] = [
       { title: 'Tab 1', pageName: 'TabsPage', tabComponent: 'Tab1Page', index: 0, icon: 'home' },
@@ -37,7 +39,8 @@ export class SideMenuPage {
   
   constructor(public navCtrl: NavController, public navParams: NavParams, public authService: Auth) {
      this.details = authService.getUserDetails();
-console.log(this.details);
+console.log("details ==   ",this.details);
+
   }
 
   ionViewDidLoad() {
@@ -87,5 +90,11 @@ console.log(this.details);
        this.authService.logout();
        this.navCtrl.setRoot(MainPage);
     
+     }
+     
+  update(){
+      
+      this.navCtrl.setRoot(ProfilePage);
+      
      }
 }

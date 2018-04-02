@@ -25576,6 +25576,93 @@ page-manage-deals .my-class .h2 {
   margin-top: 10% !important;
 }
 
+page-profile .sub_title {
+  background-color: #33ac66;
+  max-height: 40px;
+  color: white;
+  font-size: 1.65rem;
+  text-align: left;
+  width: 100%;
+}
+
+page-profile ion-card.card {
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+page-profile a, page-profile p,
+page-profile ion-card-header.card-header {
+  color: #fff !important;
+}
+
+page-profile .list > .item-block:first-child {
+  border: medium none;
+}
+
+page-profile .item {
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border: medium none;
+  color: white;
+}
+
+page-profile .item .button-inner {
+  color: white;
+}
+
+page-profile .item .text-input {
+  color: #fff;
+}
+
+page-profile .item input::-moz-placeholder {
+  color: #fff !important;
+}
+
+page-profile .item input:-moz-placeholder {
+  color: #fff !important;
+}
+
+page-profile .item *::-webkit-input-placeholder {
+  color: #fff !important;
+}
+
+page-profile .item *:-ms-input-placeholder {
+  color: #fff !important;
+}
+
+page-profile .item *:-moz-placeholder {
+  color: #fff !important;
+}
+
+page-profile .icon {
+  padding-right: 10px;
+}
+
+page-profile .bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+page-profile .circle-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 300px;
+  border-radius: 50%;
+}
+
+page-profile .item-md ion-avatar ion-img, page-profile .item-md ion-avatar img {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+}
+
+page-profile .item-ios ion-avatar ion-img, page-profile .item-ios ion-avatar img {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+}
+
 page-pt-finder ion-card.card {
   box-shadow: none;
   background: rgba(0, 0, 0, 0.5);
@@ -25644,6 +25731,13 @@ page-pt-finder .circle-pic {
   height: 50px;
   border-radius: 100px;
   border-radius: 50%;
+}
+
+page-pt-finder .item-ios ion-avatar ion-img, page-pt-finder .item-ios ion-avatar img {
+  border-radius: 20%;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
 }
 
 page-pt-user ion-card.card {
@@ -25840,7 +25934,7 @@ page-side-menu .i {
 }
 
 page-side-menu .side_button {
-  margin-top: 20%;
+  margin-top: 7%;
 }
 
 signup-page .background {

@@ -1,0 +1,144 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->        
+  <!-- <ion-navbar color="secondary">
+      <ion-buttons start>
+          <button ion-button icon-only  menuToggle>
+                <ion-icon name="menu"></ion-icon>
+              </button>
+         </ion-buttons>
+            <ion-title>Profile</ion-title>
+  </ion-navbar>
+
+<ion-card>
+
+    <ion-card-header>
+      Profile
+    </ion-card-header>
+  
+  <ion-card-content>
+
+        <ion-item >
+          <ion-avatar item-left >
+              <img  class="circle-pic" src="{{details.img}}">
+          </ion-avatar>
+          <h1>{{details.name}}</h1>
+        </ion-item>
+
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+
+  <ion-card-header>
+    Details
+  </ion-card-header>
+
+  <ion-card-content>
+
+  <ion-item class="sub_title">
+      <ion-icon small class="i" name="mail"> <b>Age : </b>  {{details.email}} </ion-icon>
+  </ion-item>
+
+  <ion-item class="sub_title">
+    <ion-icon small class="i" name="mail"> <b>Weight : </b>  {{details.weight}}Kg </ion-icon>
+  </ion-item>
+
+  <ion-item class="sub_title">
+    <ion-icon small class="i" name="mail"> <b>Current Goal : </b>  {{details.weight}}Kg </ion-icon>
+  </ion-item>
+
+  <ion-item class="sub_title">
+    <ion-icon small class="i" name="mail"> <b>Target calories per day : </b>  {{target}}Kg </ion-icon>
+  </ion-item>
+
+<button class="side_button" ion-button color="light" (click)="logout()">Save </button>
+  
+<button class="side_button" ion-button block outline color="light" (click)="logout()">Save </button>
+
+
+
+
+</ion-card-content>
+</ion-card> -->
+
+<ion-header>
+
+    <ion-navbar color="secondary">
+        <ion-buttons start>
+            <button ion-button icon-only  menuToggle>
+                  <ion-icon name="menu"></ion-icon>
+                </button>
+           </ion-buttons>
+              <ion-title>Update Profile</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+    <ion-card>
+  
+      <ion-card-header>
+        Profile
+      </ion-card-header>
+      
+      <ion-card-content>
+  
+        <ion-list no-line>
+            <ion-item >
+                <ion-avatar item-left >
+                    <img  class="circle-pic" src="{{details.img}}">
+                </ion-avatar>
+                <h1>{{details.name}}</h1>
+                <h2>{{details.age}}</h2>
+              </ion-item>
+          
+            </ion-list>
+        
+          </ion-card-content>
+          
+        </ion-card>
+        
+        <ion-card>
+  
+            <ion-card-header>
+              Details
+            </ion-card-header>
+            
+            <ion-card-content>
+                <ion-list no-line>
+
+          <ion-item class="floating_">
+            <ion-input type="number" placeholder="{{details.weight}}" [(ngModel)]="weight" ></ion-input>
+          </ion-item>
+
+          <ion-item id=custom-pop>
+            <ion-label color="Black">Fitness Goals</ion-label>
+              <ion-select [(ngModel)]="goals">
+                  <ion-option value="lose">Lose Weight / Tone Up </ion-option>
+                  <ion-option value="maintain">Maintain Weight</ion-option>
+                  <ion-option value="build">Build Muscle / Bulk </ion-option>
+              </ion-select>
+        </ion-item>
+        
+        <ion-item >
+           Target Calories per day : {{target}}
+        </ion-item>
+
+        <button ion-button  block outline color="light" (click)="update()">Save</button>
+        </ion-list>
+        
+      </ion-card-content>
+      
+    </ion-card>
+  
+  
+  </ion-content>
+  
+  
+  

@@ -21,7 +21,11 @@ export class SignupPage {
   loading: any;
   pattern = "A";
   myForm: any;
-
+  img: any = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973461_1280.png";
+  age: any;
+  goals: any;
+  weight: any;
+  
   constructor(public navCtrl: NavController, public authService: Auth, public loadingCtrl: LoadingController) {
   }
 
@@ -37,7 +41,13 @@ export class SignupPage {
         email: this.email,
         name: this.name,
         password: this.password,
-        role: this.role
+        role: this.role,
+        age: this.age,
+        img: this.img,
+        goals: this.goals,
+        weight: this.weight
+
+
     };
     this.authService.createAccount(details).then((result) => {
       this.loading.dismiss();

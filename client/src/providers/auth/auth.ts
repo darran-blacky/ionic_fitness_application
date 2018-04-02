@@ -152,4 +152,18 @@ export class Auth {
     }
    }
  
+
+   getUserGoals(){
+    let payload;
+    const token = this.token;
+    if(token){
+      payload = token.split('.')[1];
+      payload = window.atob(payload);
+      return JSON.parse(payload).goals;      
+    }
+    else {
+      return "Couldn't get user's role!!!!!!" ; 
+    }
+ 
+  }
 }
