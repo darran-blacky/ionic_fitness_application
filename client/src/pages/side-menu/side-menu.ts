@@ -28,6 +28,7 @@ export interface PageInterface {
 export class SideMenuPage {
   email: any;
   details : any;
+  weight: any;
   
   rootPage = 'TabsPage';
     pages: PageInterface[] = [
@@ -39,12 +40,15 @@ export class SideMenuPage {
   
   constructor(public navCtrl: NavController, public navParams: NavParams, public authService: Auth) {
      this.details = authService.getUserDetails();
+     this.weight = authService.getUser("1");
 console.log("details ==   ",this.details);
 
   }
 
   ionViewDidLoad() {
     console.log(this.details);
+    this.weight = this.authService.getUser("1");
+    
   }
 
 

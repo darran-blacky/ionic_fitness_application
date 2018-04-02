@@ -48,14 +48,49 @@ export class TrainersProvider {
       this.http.get( this.URL +'api/client/' + email, {headers: headers} )
       .map(res => res.json())
       .subscribe(data => {
-        console.log("GET CURRENT COACH === " , data.coach.name)
-       
+ 
        resolve(data.coach.name);
       }, (err) => {
         console.log("ERROR !!@!@,   " ,err)
         reject(err);
       });
   });  
+}
+
+getCurrentCoach_img(email){
+  return new Promise((resolve, reject) => {
+
+    let headers = new Headers();
+    headers.append('Authorization', this.authService.token);
+    
+    this.http.get( this.URL +'api/client/' + email, {headers: headers} )
+    .map(res => res.json())
+    .subscribe(data => {
+    
+     resolve(data.coach.img);
+    }, (err) => {
+      console.log("ERROR !!@!@,   " ,err)
+      reject(err);
+    });
+});  
+}
+
+getCurrentCoach_email(email){
+  return new Promise((resolve, reject) => {
+
+    let headers = new Headers();
+    headers.append('Authorization', this.authService.token);
+    
+    this.http.get( this.URL +'api/client/' + email, {headers: headers} )
+    .map(res => res.json())
+    .subscribe(data => {
+    
+     resolve(data.coach.email);
+    }, (err) => {
+      console.log("ERROR !!@!@,   " ,err)
+      reject(err);
+    });
+});  
 }
 
 getCurrentClient(id){

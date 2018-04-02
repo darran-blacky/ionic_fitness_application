@@ -7,7 +7,7 @@
                           <ion-icon name="menu"></ion-icon>
                         </button>
                    </ion-buttons>
-                      <ion-title>Available Coaches</ion-title>
+                      <ion-title>Coach Finder</ion-title>
             </ion-navbar>
     </ion-header>
   <ion-content>
@@ -23,13 +23,12 @@
             
                    
               <ion-list>
-                      <ion-item  *ngFor="let trainer of trainers" (click)="viewDeals(trainer.email)">
+                      <ion-item *ngFor="let trainer of trainers" (click)="viewDeals(trainer.email)">
                         <ion-avatar item-left>
                           <img  src="{{trainer.img}}">
-                        </ion-avatar>
-                        
-                        <h1>{{trainer.name}}</h1>
-                        <h2>{{trainer.email}}</h2>
+                      </ion-avatar>
+                        <h1 class="custom-margin">{{trainer.name}}</h1>
+                        <h2 class="custom-margin">{{trainer.email}}</h2>
                       </ion-item>
               </ion-list>
                 

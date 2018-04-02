@@ -1,6 +1,5 @@
  
     <ion-header>
-        
             <ion-navbar color="secondary">
                 <ion-buttons start>
                     <button ion-button icon-only menuToggle>
@@ -10,6 +9,7 @@
                       <ion-title>Current Trainer</ion-title>
             </ion-navbar>
     </ion-header>
+
 <ion-content>
   
           <ion-card>
@@ -30,12 +30,25 @@
           </ion-card>
           <br>
 
-        <ion-card>
+        <ion-card >
+
             <ion-card-header>
-                Current Trainer : {{current}}
-              </ion-card-header>
+                Current Trainer
+             </ion-card-header>
+
           <ion-card-content>
-            <ion-list>
+
+              <ion-list no-lines>
+                  <ion-item>
+                <ion-avatar item-left >
+                          <img  class="circle-pic" src="{{img}}">
+                </ion-avatar>
+                      <h1>{{name}}</h1>
+                      <h2>{{email}}</h2>
+                </ion-item>
+                
+      
+                
                 <ion-item> 
                     <ion-label color="white">Rate Online Coach (Stars : {{rating}})</ion-label>
                 </ion-item>
@@ -58,4 +71,4 @@
 
     
         
-        
+   

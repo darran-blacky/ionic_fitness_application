@@ -21,7 +21,6 @@ import { RegularUserPage } from '../regular-user/regular-user';
 export class PtFinderPage {
   trainers: any
   userDetails: any
-  imgUrl: any = '/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/assets/img/bg.jpg'
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public authService: Auth,public trainerService : TrainersProvider) {
     this.userDetails = navParams.get("name");  

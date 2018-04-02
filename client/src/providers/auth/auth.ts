@@ -53,7 +53,7 @@ export class Auth {
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
  
-        this.http.post( this.URL +'api/auth/register', JSON.stringify(details), {headers: headers})
+        this.http.post(this.URL + 'api/auth/register', JSON.stringify(details), {headers: headers})
           .subscribe(res => {
  
             let data = res.json();
@@ -166,4 +166,49 @@ export class Auth {
     }
  
   }
+
+
+  updateWeight(details){
+ 
+    return new Promise((resolve, reject) => {
+ 
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        headers.append('Authorization', this.token);
+
+        this.http.post(this.URL + 'api/users/update', JSON.stringify(details), {headers: headers})
+        .map(res => res.json())
+        .subscribe(res => {
+            resolve(res);
+          }, (err) => {
+            reject(err);
+          });
+    });
+ 
+  }
+
+  getUser(arg){
+    return new Promise((resolve, reject) => {
+
+      let headers = new Headers();
+      headers.append('Authorization', this.token);
+      
+      this.http.get( this.URL +'api/users/' + this.getUserEmail(), {headers: headers} )
+      .map(res => res.json())
+      .subscribe(data => {
+        if(arg = "1"){
+          console.log("get User weight ==  " ,data.weight)
+          resolve(data.weight);
+        }else if(arg == "2"){
+          console.log("get User goals ==  " ,data.goals)
+          resolve(data.goals);
+        }else
+        console.log("get User data ==  " ,data)
+       resolve(data);
+      }, (err) => {
+        console.log("ERROR !!@!@,   " ,err)
+        reject(err);
+      });
+  });  
+}  
 }

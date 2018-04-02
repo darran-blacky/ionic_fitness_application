@@ -60,7 +60,7 @@ export class SignupPage {
  
   }
 }
-else 
+ 
   showLoader(){
  
     this.loading = this.loadingCtrl.create({

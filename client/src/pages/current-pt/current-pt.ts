@@ -18,32 +18,45 @@ import { Auth } from '../../providers/auth/auth';
 
 export class CurrentPtPage {
   email : any;
-  current: any;
+  trainers: any;
   rating: any;
-
+  name: any;
+  img: any;
+  
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public authService: Auth,public trainerService : TrainersProvider) {
     this.email = authService.getUserEmail();
     this.rating = 0;
-  
-
+    
+    
   }
 
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CurrentPtPage');
-
-
+    
     this.trainerService.getCurrentCoach(this.email).then((data) => {
-      this.current = data;
-     console.log("data client ---- ===> : " , data);
+      this.name = data;
      }, (err) => {
          console.log("not allowed : " );
      });
 
+     this.trainerService.getCurrentCoach_email(this.email).then((data) => {
+      this.email = data;
+     }, (err) => {
+         console.log("not allowed : " );
+     });
+
+     this.trainerService.getCurrentCoach_img(this.email).then((data) => {
+      this.img = data;
+     }, (err) => {
+         console.log("not allowed : " );
+     });
   }
 
   search(){
     this.navCtrl.setRoot(PtFinderPage);
   }
+
+  
 }

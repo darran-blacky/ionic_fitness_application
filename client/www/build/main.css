@@ -24774,6 +24774,27 @@ ion-content {
   font-size: 20px;
 }
 
+.card-header-ios {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #333;
+  padding: 15px;
+}
+
+.card-header-md {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #333;
+  padding: 15px;
+}
+
+.custom-margin {
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  margin: 0;
+}
+
 page-create-workout .button-inner {
   color: "secondary";
 }
@@ -24894,6 +24915,39 @@ page-current-pt .icon {
 page-current-pt .bottom {
   position: absolute;
   bottom: 0;
+}
+
+page-current-pt .circle-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  border-radius: 50%;
+}
+
+page-current-pt .item-md ion-avatar ion-img, page-current-pt .item-md ion-avatar img {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+}
+
+page-current-pt .item-ios ion-avatar ion-img, page-current-pt .item-ios ion-avatar img {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+}
+
+page-current-pt .item-ios h1 {
+  margin: 8px 0px -77%;
+  font-size: 1.8rem;
+  font-weight: normal;
+  /* margin: 0%; */
+}
+
+page-current-pt .item-md h1 {
+  margin: 8px 0px -77%;
+  font-size: 1.8rem;
+  font-weight: normal;
+  /* margin: 0%; */
 }
 
 #welcome .background {
@@ -25663,6 +25717,20 @@ page-profile .item-ios ion-avatar ion-img, page-profile .item-ios ion-avatar img
   height: 130px;
 }
 
+page-profile .item-ios h1 {
+  margin: 8px 0px -77%;
+  font-size: 1.8rem;
+  font-weight: normal;
+  /* margin: 0%; */
+}
+
+page-profile .item-md h1 {
+  margin: 8px 0px -77%;
+  font-size: 1.8rem;
+  font-weight: normal;
+  /* margin: 0%; */
+}
+
 page-pt-finder ion-card.card {
   box-shadow: none;
   background: rgba(0, 0, 0, 0.5);
@@ -25679,7 +25747,6 @@ page-pt-finder .list > .item-block:first-child {
 }
 
 page-pt-finder .item {
-  margin-bottom: 10px;
   background: rgba(255, 255, 255, 0.5);
   border: medium none;
 }
@@ -25734,10 +25801,24 @@ page-pt-finder .circle-pic {
 }
 
 page-pt-finder .item-ios ion-avatar ion-img, page-pt-finder .item-ios ion-avatar img {
-  border-radius: 20%;
+  border-radius: 50%;
   overflow: hidden;
   width: 100px;
   height: 100px;
+}
+
+page-pt-finder .item-ios h1 {
+  margin: 8px 0px -77%;
+  font-size: 1.8rem;
+  font-weight: normal;
+  /* margin: 0%; */
+}
+
+page-pt-finder .item-md h1 {
+  margin: 8px 0px -77%;
+  font-size: 1.8rem;
+  font-weight: normal;
+  /* margin: 0%; */
 }
 
 page-pt-user ion-card.card {
