@@ -1,3 +1,57 @@
 page-side-menu {
 
+    .item-profile {
+        background-color: rgb(51, 172, 102);
+        height: 250px;
+        .item-avatar > img:first-child {
+            align-items: center;
+            margin-left: 12%;
+            max-width: 200px;
+          max-height: 200px;
+        }
+        align-items: center;
+      }
+      .circle-pic{
+        align-items: center;
+        width:200px;
+        height:200px;
+        border-radius: 200px;
+        -moz-border-radius: 200px; 
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+    }
+    .title_1{
+        background-color: rgb(51, 172, 102);
+        align-items: center;
+        color: white;
+        font-size: 2.7rem;
+        text-align: center;
+        width: 100%;
+    }
+    .sub_title{
+        background-color: rgb(51, 172, 102);
+        color: white;
+        font-size: 1.65rem;
+        text-align: left;
+        width: 100%;
+    }
+
+    .tab_1{
+        background-color: rgb(51, 172, 102);
+     
+        color: white;
+        font-size: 1.95rem;
+
+    }
+    .custom-icon {
+        color : white;
+        
+      }
+      .i{
+        margin-top: 2%;
+      }
+
+      .side_button{
+        margin-top: 20%;
+      }
 }

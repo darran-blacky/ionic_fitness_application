@@ -1,22 +1,50 @@
-import { Component } from "@angular/core";
+import { Component , OnDestroy} from "@angular/core";
 import { NavController,NavParams,IonicPage, ModalController, AlertController, LoadingController } from 'ionic-angular';
 import { Offers } from '../../providers/offers/offers';
 import { Auth } from '../../providers/auth/auth';
 import { MainPage } from '../main/main';
 import { ToastController } from 'ionic-angular';
-
+import { Observable } from 'rxjs/Observable';
 /**
  * Generated class for the RegularUserPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
+
+
+interface Subject{
+  registerObserver(o: Observer);
+  removeObserver(o: Observer);
+  notifyObserver();
+}
+
+interface Observer{
+  update(offers: any);
+}
+
 @IonicPage()
 @Component({
   selector: 'page-regular-user',
   templateUrl: 'regular-user.html',
 })
-export class RegularUserPage {
+
+export class RegularUserPage implements OnDestroy, Subject {
+private observers: Observer[] = [];
+
+  registerObserver(o: Observer) {
+    this.observers.push(o);
+  }
+
+  removeObserver(o: Observer) {
+    let index = this.observers.indexOf(o);
+    this.observers.splice(index,1);
+  }
+  notifyObserver() {
+    for (let observer of this.observers){
+      observer.update(this.offers);
+    }
+  }
 
   offers: any;
   loading: any;
@@ -38,18 +66,28 @@ export class RegularUserPage {
   }
  
   ionViewDidLoad(){
- 
-    this.offerService.getOffers(this.userDetails).then((data) => {
-      console.log(" offers data == ", data);
-      console.log(" offers data == ", data);
+
+//  let offerObservable = Observable.create(observer =>{
+
+  this.fetchOffers();
+  //  setInterval(()=> {
+  //    observer.next("Refreshing Deals");
+  //  }, 1000);
+  //  });
+
+  //  offerObservable.subscribe((data)=>{
+
+  //     console.log("Refreshing");
+  //     this.fetchOffers();
      
-          this.offers = data;
-    }, (err) => {
-        console.log("not allowed");
-    });
- 
+  //  });
+  
+   
   }
- 
+  ngOnDestroy(){
+   
+  }
+
   message(user){
  
     let prompt = this.alertCtrl.create({
@@ -150,5 +188,18 @@ export class RegularUserPage {
     toast.setCssClass("my_toast");
     toast.present();
   }
- 
+
+  fetchOffers(){
+
+      this.offerService.getOffers(this.userDetails).then((data) => {
+          
+              this.offers = data;
+          }, (err) => {
+              console.log("not allowed");
+         });
+    }
+
+    refresh(){
+       this.fetchOffers();
+    }
 }

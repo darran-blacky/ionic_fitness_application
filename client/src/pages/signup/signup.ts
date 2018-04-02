@@ -5,6 +5,7 @@ import { HomePage } from '../home/home';
 import { RegularUserPage } from '../regular-user/regular-user';
 import { PtUserPage } from '../pt-user/pt-user';
 import { DashboardPage } from '../dashboard/dashboard';
+import { SideMenuPage } from '../side-menu/side-menu'
 
 @IonicPage()
 @Component({
@@ -15,6 +16,7 @@ export class SignupPage {
  
   role: string;
   email: string;
+  name: string;
   password: string;
   loading: any;
   pattern = "A";
@@ -33,6 +35,7 @@ export class SignupPage {
 
     let details = {
         email: this.email,
+        name: this.name,
         password: this.password,
         role: this.role
     };
@@ -40,11 +43,7 @@ export class SignupPage {
       this.loading.dismiss();
       console.log(result);
       console.log("IF " + this.role + " == personal Trainer" );
-      if(this.role == "personal Trainer") {
-        this.navCtrl.setRoot(DashboardPage);
-      }
-      else
-      this.navCtrl.setRoot(DashboardPage);
+      this.navCtrl.setRoot(SideMenuPage);
     }, (err) => {
         this.loading.dismiss();
     });

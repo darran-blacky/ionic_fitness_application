@@ -1,20 +1,32 @@
 
 <ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar color="secondary">
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
- 
+  
   <ion-content>
-    <ion-list>
-      <button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">
-          <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
-          {{ p.title }}
-        </button>
-    </ion-list>
-    <button ion-button block outline color="light" (click)="logout()">Log Out : {{ details?.email }}</button>
-    {{ details?.role }}
+
+      <ion-item class="item-profile" >
+          <div class="item-avatar">
+            <img  class="circle-pic" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973461_1280.png">
+          </div>
+      </ion-item>
+     
+      <ion-item class="title_1">
+         <b>{{details.name}}</b>
+      </ion-item>
+<br>
+<ion-item class="title_1">
+ </ion-item>
+      <ion-item class="sub_title">
+        <ion-label ><ion-icon class="i" small name="person"><b>Account Type:  </b>   {{details.role}} </ion-icon></ion-label>
+      </ion-item>
+
+      <ion-item class="sub_title">
+          <ion-icon small class="i" name="mail"> <b>Email : </b>  {{details.email}} </ion-icon>
+      </ion-item>
+    <button class="side_button" ion-button block outline color="light" (click)="logout()">Log Out </button>
+
+
+    
+    
   </ion-content>
 
 </ion-menu>

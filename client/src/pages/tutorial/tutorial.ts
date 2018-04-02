@@ -1,6 +1,8 @@
 import { Component, ViewChild, trigger, transition, style, state, animate, keyframes } from '@angular/core';
-import { NavController, Slides } from 'ionic-angular';
+import { NavController, Slides,LoadingController  } from 'ionic-angular';
 import { MainPage } from '../main/main';
+import { Auth } from '../../providers/auth/auth'; 
+import { SideMenuPage } from '../side-menu/side-menu'
 
 /**
  * Generated class for the TutorialPage page.
@@ -36,12 +38,24 @@ export class TutorialPage {
   @ViewChild(Slides) slides: Slides;
   skipMsg: string = "Skip";
   state: string = 'x';
+  loading:  any;
 
-    constructor(public navCtrl: NavController) {
+    constructor(public navCtrl: NavController,public authService: Auth, public loadingCtrl: LoadingController) {
     }
+   splash = true;
   
     ionViewDidLoad() {
+      setTimeout(() => this.splash = false, 4000);
       console.log('ionViewDidLoad TutorialPage');
+            // Check if already authenticated
+      this.authService.checkAuthentication().then((res) => {
+        console.log("Already authorized");
+        // this.loading.dismiss();
+        this.navCtrl.setRoot(SideMenuPage);
+    }, (err) => {
+        console.log("Not already authorized");
+        // this.loading.dismiss();
+    });
     }
 
     skip() {
@@ -65,37 +79,15 @@ export class TutorialPage {
     }
 
   
-  }
-
-// export class HomePage {
- 
-//  @ViewChild(Slides) slides: Slides;
-//   skipMsg: string = "Skip";
-//   state: string = 'x';
-//   constructor(public navCtrl: NavController) {
-
-//   }
-
   
 
-//   skip() {
-//     this.navCtrl.push(MainPage);
-//   }
-
-//   slideChanged() {
-//     if (this.slides.isEnd())
-//       this.skipMsg = "Alright, I got it";
-//   }
-
-//   slideMoved() {
-//     if (this.slides.getActiveIndex() >= this.slides.getPreviousIndex())
-//       this.state = 'rightSwipe';
-//     else
-//       this.state = 'leftSwipe';
-//   }
-
-//   animationDone() {
-//     this.state = 'x';
-//   }
-
-// }
+  showLoader(){
+    
+           this.loading = this.loadingCtrl.create({
+               content: 'Authenticating...'
+           });
+    
+           this.loading.present();
+    
+       }
+  }

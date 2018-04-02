@@ -29,15 +29,8 @@ export class ManageDealsPage {
   }
  
   ionViewDidLoad(){
-  this.v =+ 1;
-    this.offerService.getOffers(this.userDetails).then((data) => {
-      console.log(" offers data == ", data);
-      console.log(" time  == ", this.v);
-     
-          this.offers = data;
-    }, (err) => {
-        console.log("not allowed");
-    });
+    
+    this.fetchOffers();
  
   }
  
@@ -80,7 +73,7 @@ export class ManageDealsPage {
                       console.log("offer === " , this.new_offer);
                       
                         this.loading.dismiss();
-                        this.offers = result;
+                        this.fetchOffers();
                         this.presentToast(0);
       
                         console.log("offer created : " , result);
@@ -127,7 +120,7 @@ export class ManageDealsPage {
   showLoader(){
  
     this.loading = this.loadingCtrl.create({
-      content: 'Authenticating...'
+      content: 'Creating Offer...'
     });
  
     this.loading.present();
@@ -164,4 +157,18 @@ export class ManageDealsPage {
     toast.present();
   }
  
+
+  fetchOffers(){
+
+    this.offerService.getOffers(this.userDetails).then((data) => {
+ 
+          this.offers = data;
+
+    }, (err) => {
+
+        console.log("not allowed");
+
+    });
+
+  }
 }

@@ -1,6 +1,5 @@
 page-regular-user {
         
-                    
                         ion-card.card {
                             box-shadow: none;
                             background: rgba(0, 0, 0, 0.5);
@@ -61,6 +60,11 @@ page-regular-user {
                         .alert-head {
                         background-color : gainsboro;
                         font-size: 20px;
+        
+                        }
+                        .h2{
+                        margin-top: 10% !important;
+
                         }
                         .alert-message {
                         font-size: 20px;
@@ -75,4 +79,4 @@ page-regular-user {
                         .toast-container{
                             background-color: seagreen;
                             color: white;
-                            }
+                        }

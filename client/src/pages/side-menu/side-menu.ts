@@ -26,9 +26,8 @@ export interface PageInterface {
 })
 
 export class SideMenuPage {
-  details : String;
+  details : any;
   rootPage = 'TabsPage';
-  
     pages: PageInterface[] = [
       { title: 'Tab 1', pageName: 'TabsPage', tabComponent: 'Tab1Page', index: 0, icon: 'home' },
       { title: 'Tab 2', pageName: 'TabsPage', tabComponent: 'Tab2Page', index: 1, icon: 'contacts' },
@@ -38,10 +37,13 @@ export class SideMenuPage {
   
   constructor(public navCtrl: NavController, public navParams: NavParams, public authService: Auth) {
      this.details = authService.getUserDetails();
+console.log(this.details);
   }
 
   ionViewDidLoad() {
+    console.log(this.details);
   }
+
 
   @ViewChild(Nav) nav: Nav;
   

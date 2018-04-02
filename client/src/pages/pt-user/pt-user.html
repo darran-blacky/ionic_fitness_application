@@ -8,7 +8,7 @@
       
           <ion-navbar color="secondary">
               <ion-buttons start>
-                  <button ion-button menuToggle>
+                  <button ion-button icon-only menuToggle>
                         <ion-icon name="menu"></ion-icon>
                       </button>
                  </ion-buttons>
@@ -31,7 +31,7 @@
       <ion-item-sliding *ngFor="let client of clients">
           
                <ion-item>
-                 {{client.email}}
+                 {{client.name}}
                </ion-item>
       
              </ion-item-sliding>

@@ -29,7 +29,7 @@ import { PtFinderPage } from '../pages/pt-finder/pt-finder';
 import { ViewDealsPage } from '../pages/view-deals/view-deals';
 import { ManageDealsPage } from '../pages/manage-deals/manage-deals';
 import { ViewClientsPage } from '../pages/view-clients/view-clients';
-
+import { CreateWorkoutPage } from '../pages/create-workout/create-workout'
 
 /** Providers */
 import { Auth } from '../providers/auth/auth';
@@ -51,7 +51,8 @@ import { TrainersProvider } from '../providers/trainers/trainers';
     SideMenuPage,
     WorkoutExercisesPage,
     PtFinderPage,
-    ManageDealsPage
+    ManageDealsPage,
+    CreateWorkoutPage
     
   ],
   imports: [
@@ -77,7 +78,9 @@ import { TrainersProvider } from '../providers/trainers/trainers';
     SideMenuPage,
     WorkoutExercisesPage,
     PtFinderPage,
-    ManageDealsPage
+    ManageDealsPage,
+    CreateWorkoutPage
+    
    
   ],
   providers: [

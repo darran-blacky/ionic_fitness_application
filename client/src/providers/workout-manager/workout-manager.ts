@@ -27,7 +27,7 @@ export class WorkoutManagerProvider {
          let headers = new Headers();
          headers.append('Authorization', this.authService.token);
     //need to change to exercises
-         this.http.get( this.URL +'api/exercises', {headers: headers})
+         this.http.get( this.URL +'api/exercises')
            .map(res => res.json())
            .subscribe(data => {
              resolve(data);
@@ -84,5 +84,45 @@ export class WorkoutManagerProvider {
         
          }
 
+         getExercisesByGroup(muscle){
+             return new Promise((resolve, reject) => {
+          
+               
+               this.http.get( this.URL +'api/exercises/groups/' + muscle )
+               .map(res => res.json())
+               .subscribe(data => {
+          
+                console.log("\n\n data exercise : " + data.exercise + "\n\n");
+                console.log("\n\n data exercises : " + data.exercises + "\n\n");
+          
+                
+                 resolve(data.exercise);
+               }, (err) => {
+                 console.log("ERROR !!@!@,   " ,err)
+                 reject(err);
+               });
+           });
+          
+           }
+
+           createWorkout(new_Workout){
+ 
+            return new Promise((resolve, reject) => {
+         
+              let headers = new Headers();
+              headers.append('Content-Type', 'application/json');
+              headers.append('Authorization', this.authService.token);
+            
+              this.http.post( this.URL +'api/workouts', JSON.stringify(new_Workout), {headers: headers})
+                .map(res => res.json())
+                .subscribe(res => {
+                  resolve(res);
+                }, (err) => {
+                  reject(err);
+                });
+         
+            });
+         
+          }
 
 }

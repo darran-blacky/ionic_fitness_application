@@ -48,8 +48,9 @@ export class TrainersProvider {
       this.http.get( this.URL +'api/client/' + email, {headers: headers} )
       .map(res => res.json())
       .subscribe(data => {
+        console.log("GET CURRENT COACH === " , data.coach.name)
        
-       resolve(data.coach.email);
+       resolve(data.coach.name);
       }, (err) => {
         console.log("ERROR !!@!@,   " ,err)
         reject(err);

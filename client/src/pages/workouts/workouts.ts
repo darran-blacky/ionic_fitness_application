@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams , ModalController, AlertController,
 import { WorkoutManagerProvider } from '../../providers/workout-manager/workout-manager';
 import { Auth } from '../../providers/auth/auth';
 import { WorkoutExercisesPage } from '../workout-exercises/workout-exercises'
+import { CreateWorkoutPage } from '../create-workout/create-workout'
 
 
 /**
@@ -104,5 +105,10 @@ addExercise(){
     
        prompt.present();
     
+}
+
+createWorkout(){
+  this.navCtrl.setRoot(CreateWorkoutPage);
+  
 }
 }

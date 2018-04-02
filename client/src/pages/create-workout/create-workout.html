@@ -1,0 +1,73 @@
+<!--
+  Generated template for the CreateWorkoutPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="secondary">
+        <ion-buttons left >
+            <button ion-button icon-only  menuToggle>
+                  <ion-icon name="menu"></ion-icon>
+                </button>
+           </ion-buttons>
+      <ion-title >{{workout.title}}</ion-title>
+    </ion-navbar>
+    
+  </ion-header>
+
+  
+  <ion-content>
+    <!-- <ion-card-header class="db">
+        Title
+    </ion-card-header>  -->
+    <ion-list>
+    
+    <ion-item class="db">
+        <ion-label type="text" color="white" floating>Title</ion-label>
+        <ion-input [(ngModel)]="workout.title" name="title"></ion-input>
+    </ion-item>
+    </ion-list>
+    
+  
+
+  
+    <ion-card-header class="db">
+      Muscle Groups
+    </ion-card-header> 
+     <ion-list>
+      
+        <ion-item>
+
+          <ion-label class= "custom_popup">Muscles: </ion-label>
+                <ion-select class= "custom_popup" [(ngModel)]="muscle_groups2" (ionChange)="onChange()" multiple="true">
+                  <ion-option>Chest</ion-option>
+                  <ion-option>Back</ion-option>
+                  <ion-option>Legs</ion-option>
+                  <ion-option>Shoulders</ion-option>
+                  <ion-option>Abs</ion-option>
+                  <ion-option>Arms</ion-option>
+                </ion-select>
+          </ion-item>
+      
+     </ion-list>
+
+     <ion-card-header class="db">
+      Exercises
+    </ion-card-header> 
+       
+    <ion-list>
+        <ion-item>
+      
+      <ion-label class= "custom_popup">Select Exercises:</ion-label>
+        <ion-select class= "custom_popup" [(ngModel)]="selected_exercises"   multiple="true">
+
+          <ion-option *ngFor="let e of exercises" value={{e._id}} >{{e.title}}</ion-option>
+  
+        </ion-select>
+      </ion-item>
+     </ion-list>
+     <button color="secondary" width="100%" ion-button icon-only  (click)="addToWorkout()" color="secondary" >Save Workout<ion-icon name="add"></ion-icon></button>
+     
+   </ion-content>

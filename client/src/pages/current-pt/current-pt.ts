@@ -19,8 +19,14 @@ import { Auth } from '../../providers/auth/auth';
 export class CurrentPtPage {
   email : any;
   current: any;
+  rating: any;
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public authService: Auth,public trainerService : TrainersProvider) {
     this.email = authService.getUserEmail();
+    this.rating = 0;
+  
+
   }
 
 

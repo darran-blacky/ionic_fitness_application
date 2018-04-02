@@ -8,7 +8,7 @@
 
   <ion-navbar color="secondary">
       <ion-buttons left >
-          <button ion-button menuToggle>
+          <button ion-button icon-only  menuToggle>
                 <ion-icon name="menu"></ion-icon>
               </button>
          </ion-buttons>
@@ -18,7 +18,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-card-header>
+  <ion-card-header class="db">
     Workouts
   </ion-card-header> 
    <ion-list>
@@ -30,17 +30,12 @@
      </ion-item-sliding>
   
    </ion-list>
-   <ion-card-header>
-    Exercises
-  </ion-card-header> 
-     <button ion-button icon-only (click)="addExercise()">ADD<ion-icon name="add"></ion-icon></button>
-  <ion-list>
   
-     <ion-item-sliding *ngFor="let e of exercises">
+ 
+  
         <ion-item> 
-          <button (click)="newPage(e.title)"ion-button color="secondary">{{e.title}}</button>   
+             <button width= "100%" ion-button color="secondary" (click)="createWorkout()">Create new Workout<ion-icon name="add"></ion-icon></button>
         </ion-item>
-     </ion-item-sliding>
   
-   </ion-list>
+
  </ion-content>

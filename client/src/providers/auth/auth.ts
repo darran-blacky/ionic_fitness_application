@@ -7,8 +7,11 @@ import { url } from '../config';
 
 @Injectable()
 export class Auth {
+
   public token: any;
+
   public URL : any ;
+
   public current_user: any;
   constructor(public http: Http, private storage: Storage) {
 //  , public storage: Storage
@@ -26,11 +29,11 @@ export class Auth {
             console.log("token ====== " ,this.storage.get('token'))
             console.log("token2 ====== " ,this.storage.get('token'))
             
-            this.current_user = this.storage.get('user');
+            // this.current_user = this.storage.get('user');
             let headers = new Headers();
             headers.append('Authorization', this.token);
  
-            this.http.get( this.URL +'/api/auth/protected', {headers: headers})
+            this.http.get( this.URL +'api/auth/protected', {headers: headers})
                 .subscribe(res => {
                     resolve(res);
                 }, (err) => {
@@ -50,7 +53,7 @@ export class Auth {
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
  
-        this.http.post( this.URL +'/api/auth/register', JSON.stringify(details), {headers: headers})
+        this.http.post( this.URL +'api/auth/register', JSON.stringify(details), {headers: headers})
           .subscribe(res => {
  
             let data = res.json();
@@ -97,7 +100,7 @@ export class Auth {
  
   logout(){
     this.storage.set('token', '');
-    this.current_user = "";
+    // this.current_user = "";
   }
 
    getUserDetails(){
@@ -119,6 +122,18 @@ export class Auth {
       payload = token.split('.')[1];
       payload = window.atob(payload);
       return JSON.parse(payload).email;      
+    }
+    else {
+      return "Couldn't get user email!!!" ; 
+    }
+   }
+   getUserName(){
+    let payload;
+    const token = this.token;
+    if(token){
+      payload = token.split('.')[1];
+      payload = window.atob(payload);
+      return JSON.parse(payload).name;      
     }
     else {
       return "Couldn't get user name!!!" ; 
