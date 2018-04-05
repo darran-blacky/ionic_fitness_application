@@ -47,7 +47,7 @@ console.log("details ==   ",this.details);
 
   ionViewDidLoad() {
     console.log(this.details);
-    this.weight = this.authService.getUser("1");
+    this.refresh();
     
   }
 
@@ -100,5 +100,9 @@ console.log("details ==   ",this.details);
       
       this.navCtrl.setRoot(ProfilePage);
       
+     }
+     async refresh(){
+        this.weight = await this.authService.getUser("1");
+       
      }
 }

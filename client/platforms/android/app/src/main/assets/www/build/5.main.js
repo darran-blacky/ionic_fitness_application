@@ -1,14 +1,14 @@
 webpackJsonp([5],{
 
-/***/ 287:
+/***/ 297:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__current_clients__ = __webpack_require__(300);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CurrentClientsPageModule", function() { return CurrentClientsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nutrition__ = __webpack_require__(312);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NutritionPageModule", function() { return NutritionPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,40 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CurrentClientsPageModule = (function () {
-    function CurrentClientsPageModule() {
+var NutritionPageModule = (function () {
+    function NutritionPageModule() {
     }
-    return CurrentClientsPageModule;
+    return NutritionPageModule;
 }());
-CurrentClientsPageModule = __decorate([
+NutritionPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__current_clients__["a" /* CurrentClientsPage */],
+            __WEBPACK_IMPORTED_MODULE_2__nutrition__["a" /* NutritionPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__current_clients__["a" /* CurrentClientsPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__nutrition__["a" /* NutritionPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__current_clients__["a" /* CurrentClientsPage */]
+            __WEBPACK_IMPORTED_MODULE_2__nutrition__["a" /* NutritionPage */]
         ]
     })
-], CurrentClientsPageModule);
+], NutritionPageModule);
 
-//# sourceMappingURL=current-clients.module.js.map
+//# sourceMappingURL=nutrition.module.js.map
 
 /***/ }),
 
-/***/ 300:
+/***/ 312:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pt_user_pt_user__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_trainers_trainers__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__manage_deals_manage_deals__ = __webpack_require__(210);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CurrentClientsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NutritionPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -63,43 +59,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-
-
-
 /**
- * Generated class for the CurrentClientsPage page.
+ * Generated class for the NutritionPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
-var CurrentClientsPage = (function () {
-    function CurrentClientsPage(navCtrl, navParams, authService, trainerService) {
+var NutritionPage = (function () {
+    function NutritionPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.authService = authService;
-        this.trainerService = trainerService;
     }
-    CurrentClientsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad CurrentClientsPage');
+    NutritionPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad NutritionPage');
     };
-    CurrentClientsPage.prototype.clients = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__pt_user_pt_user__["a" /* PtUserPage */]);
-    };
-    CurrentClientsPage.prototype.manage = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__manage_deals_manage_deals__["a" /* ManageDealsPage */]);
-    };
-    return CurrentClientsPage;
+    return NutritionPage;
 }());
-CurrentClientsPage = __decorate([
+NutritionPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
-        selector: 'page-current-clients',template:/*ion-inline-start:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/current-clients/current-clients.html"*/'<!--\n  Generated template for the CurrentClientsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    \n    <ion-navbar color="secondary">\n        <ion-buttons start>\n            <button ion-button menuToggle>\n                  <ion-icon name="menu"></ion-icon>\n                </button>\n           </ion-buttons>\n              <ion-title>Clients</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n\n      <ion-card>\n    \n        <ion-card-header>\n          Package Manager\n        </ion-card-header>\n        \n        <ion-card-content>\n    \n            <ion-item> \n                <button ion-button block outline color="secondary" (click)="manage()">Edit Offers</button>            \n             </ion-item>\n\n        </ion-card-content>\n\n        <ion-card-header>\n           Client Manager\n        </ion-card-header>\n        <ion-card-content>\n            \n        <ion-list no-line>\n            \n                    <ion-item> \n                        <ion-label color="white">Current Clients </ion-label>\n                    </ion-item>\n                    <ion-item> \n                       <button ion-button block outline color="secondary" (click)="clients()">View Clients</button>            \n                    </ion-item>\n              \n                    \n                  </ion-list>\n        </ion-card-content>\n        \n      </ion-card>\n    </ion-content>\n    \n    \n    '/*ion-inline-end:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/current-clients/current-clients.html"*/,
+        selector: 'page-nutrition',template:/*ion-inline-start:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/nutrition/nutrition.html"*/'<!--\n  Generated template for the NutritionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="secondary">\n      <ion-buttons start>\n          <button ion-button icon-only menuToggle>\n                <ion-icon name="menu"></ion-icon>\n              </button>\n         </ion-buttons>\n            <ion-title>Nutrition</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n\n  \n  \n    '/*ion-inline-end:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/nutrition/nutrition.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__["a" /* Auth */], __WEBPACK_IMPORTED_MODULE_3__providers_trainers_trainers__["a" /* TrainersProvider */]])
-], CurrentClientsPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+], NutritionPage);
 
-//# sourceMappingURL=current-clients.js.map
+//# sourceMappingURL=nutrition.js.map
 
 /***/ })
 

@@ -1,4 +1,5 @@
-page-main {
+
+	page-main {
 	.background {
         background-image: url('../assets/img/polygon-1.jpg');
        
@@ -27,11 +28,20 @@ page-main {
 		border: medium none;
 	}
 
+	.item-input .label-md{
+		color: white;
+	}
+	.item-ios{
+		color: white;
+	}
+	.item-input-has-focus .label-md[floating], .input-has-focus .label-md[floating] {
+		color:white;
+	}
 	.item {
 		margin-bottom: 10px;
 		background: rgba(255, 255, 255, 0.5);
 		border: medium none;
-
+		
 		.text-input, {
 			color: #fff;
 		}
@@ -65,17 +75,13 @@ page-main {
 		position: absolute;
 		bottom: 0;
 	}
-	.md{
-		color: white;
-	}
-	.text-input.md{
-		color: white;
+	.label label-md{
+		color:white;
 	}
 	.label-md-text-color{
-
-		color: white;
+		color:white;
 	}
-	.text-input-md{
-		color: red;
+	.label-md-text-color-focused{
+		color:white;
 	}
 }

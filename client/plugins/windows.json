@@ -1,0 +1,30 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "My Fitness Helper"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "My Fitness Helper"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "My Fitness Helper"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "My Fitness Helper"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "My Fitness Helper"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "My Fitness Helper"
+    }
+  },
+  "dependent_plugins": {}
+}

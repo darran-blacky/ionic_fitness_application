@@ -12,17 +12,71 @@
 <ion-content >
   
 <ion-content id="homeContent" scroll="false" class="padding">
-    <div class="row" id="buttonsFirstWrapper">
-        <div class="col col-50"><img src="http://commercepromote.com/mobile-app/contacts_btn.png" (click)="test()"/></div>
-        <div class="col col-50"><img src="http://commercepromote.com/mobile-app/groups_btn.png" (click)="go_to_workouts()" /></div>
+   
+   <!-- <ion-card (click)="ViewExercise('Back')">
+        <ion-card-header>
+          <img src="../../assets/img/profile_logo.png">
+        </ion-card-header>
+        <ion-card-header>
+          Back
+        </ion-card-header>
+      </ion-card>
+  <div>
+      <ion-card (click)="ViewExercise('Arms')">
+          <ion-card-header>
+            <img src="https://www.bodybuilding.com/fun/images/2014/how-to-build-monster-arms-facebook-960x540.jpg">
+          </ion-card-header>
+          <ion-card-header>
+            Arms
+          </ion-card-header>
+        </ion-card>
+  
+        <ion-card (click)="ViewExercise('Shoulders')">
+            <ion-card-header>
+              <img src="https://s3.amazonaws.com/strengthblog/wp-content/uploads/2016/04/20162534/press_banner.jpg">
+            </ion-card-header>
+            <ion-card-header>
+              Shoulders
+            </ion-card-header>
+          </ion-card>
+        </div>
+        <div>
+        <ion-card (click)="ViewExercise('Legs')">
+            <ion-card-header>
+              <img src="https://www.bodybuilding.com/fun/images/2015/best-squat-alternatives-desktop.jpg">
+            </ion-card-header>
+            <ion-card-header>
+              Legs
+            </ion-card-header>
+          </ion-card>
+  
+   -->
+<ion-card>
+  <div class="row">
+    <div class="col col-50" style="width:150px;height:150px;"><img src="../../assets/img/profile_logo.png" (click)="goto('ProfilePage')"/> 
+      <ion-card-header class="titles">
+            <b>Profile</b>
+           </ion-card-header>
     </div>
+    <div class="col col-50" style="width:177px;height:177px;"><img src="../../assets/img/create_logo.png" (click)="goto('CreateWorkoutPage')"/> <ion-card-header class="titles">
+            <b>Create Workout</b>
+           </ion-card-header>
+    </div>
+  </div>
+  <br>
+  <br>
+  
     <div class="row">
-        <div class="col col-50">
-          <a href="javascript:void(0);"><img src="http://commercepromote.com/mobile-app/de_duplication_btn.png" /></a></div>
-        <div class="col col-50"><a href="javascript:void(0);"><img src="http://commercepromote.com/mobile-app/import_btn.png" /></a></div>
+          <div class="col col-50" style="width:177px;height:177px;"><img src="../../assets/img/workout_logo.png" (click)="goto('ExerciseGroupsPage')" /> 
+              <ion-card-header class="titles">
+                    <b>Exercises</b>
+                    </ion-card-header>
+          </div>
+          <div class="col col-50" style="width:177px;height:177px;"><img src="../../assets/img/exercises_logo.png" (click)="goto('WorkoutsPage')" />
+                  <ion-card-header class="titles">
+                          <b>Workouts</b>
+              </ion-card-header>
+         </div>
     </div>
-    <div class="row">
-        <div class="col col-50"><a href="javascript:void(0);"><img src="http://commercepromote.com/mobile-app/export_btn.png" /></a></div>
-        <div class="col col-50"><a href="javascript:void(0);"><img src="http://commercepromote.com/mobile-app/configuration_btn.png" /></a></div>
-    </div>
+  </ion-card>
 </ion-content>

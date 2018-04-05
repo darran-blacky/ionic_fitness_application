@@ -26,18 +26,21 @@
    </ion-card-header>
    <ion-card-content>
        
-   <ion-list no-line>
-       
-      <ion-item-sliding *ngFor="let client of clients">
-          
-               <ion-item>
-                 {{client.name}}
-               </ion-item>
       
-             </ion-item-sliding>
-               
-             </ion-list>
-   </ion-card-content>
-   
- </ion-card>
-</ion-content>
+             
+                 
+                        
+                   <ion-list>
+                           <ion-item *ngFor="let client of clients">
+                             <ion-avatar item-left>
+                               <img  src="{{client.img}}">
+                           </ion-avatar>
+                             <h1 class="custom-margin">{{client.name}}</h1>
+                             <h2 class="custom-margin">{{client.email}}</h2>
+                           </ion-item>
+                   </ion-list>
+                     
+                 </ion-card-content>
+               </ion-card>
+             </ion-content>
+             

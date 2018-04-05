@@ -22,12 +22,14 @@
       Workouts
     </ion-card-header> 
      <ion-list>
-    
-       <ion-item-sliding *ngFor="let e of exercises">
-          <ion-item> 
-            <button ion-button icon-only color="secondary"> {{e.title}}</button>   
-          </ion-item>
-       </ion-item-sliding>
-    
-     </ion-list>
+  
+     <ion-card (click)="getInfo(exercise.description)" *ngFor="let exercise of exercises" >
+        <ion-card-header>
+          <img src="{{exercise.img}}">
+        </ion-card-header>
+        <ion-card-header>
+          {{exercise.title}}
+        </ion-card-header>
+      </ion-card>
+      </ion-list>
    </ion-content>

@@ -1,0 +1,74 @@
+<!--
+  Generated template for the ExerciseGroupsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+    <ion-navbar color="secondary">
+        <ion-buttons start>
+            <button ion-button icon-only menuToggle>
+                  <ion-icon name="menu"></ion-icon>
+                </button>
+           </ion-buttons>
+              <ion-title>Exercise Catalogue</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card (click)="ViewExercise('Chest')">
+    <ion-card-header>
+      <img src="https://cdn-maf0.heartyhosting.com/sites/muscleandfitness.com/files/styles/full_node_image_1090x614/public/media/bench-press-max-ot.jpg?itok=ueAUZjqR&timestamp=1480723989">
+    </ion-card-header>
+    <ion-card-header>
+      Chest
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card (click)="ViewExercise('Back')">
+      <ion-card-header>
+        <img src="https://www.bodybuilding.com/fun/images/2014/18-laws-of-back-training-facebook-box-960x540.jpg">
+      </ion-card-header>
+      <ion-card-header>
+        Back
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card (click)="ViewExercise('Arms')">
+        <ion-card-header>
+          <img src="https://www.bodybuilding.com/fun/images/2014/how-to-build-monster-arms-facebook-960x540.jpg">
+        </ion-card-header>
+        <ion-card-header>
+          Arms
+        </ion-card-header>
+      </ion-card>
+
+      <ion-card (click)="ViewExercise('Shoulders')">
+          <ion-card-header>
+            <img src="https://s3.amazonaws.com/strengthblog/wp-content/uploads/2016/04/20162534/press_banner.jpg">
+          </ion-card-header>
+          <ion-card-header>
+            Shoulders
+          </ion-card-header>
+        </ion-card>
+
+      <ion-card (click)="ViewExercise('Legs')">
+          <ion-card-header>
+            <img src="https://www.bodybuilding.com/fun/images/2015/best-squat-alternatives-desktop.jpg">
+          </ion-card-header>
+          <ion-card-header>
+            Legs
+          </ion-card-header>
+        </ion-card>
+
+        <ion-card (click)="ViewExercise('Abs')">
+            <ion-card-header>
+              <img src="https://health-bt.com/wp-content/uploads/2016/06/93917f57583d47bf8b1914c63be04bf6.jpg">
+            </ion-card-header>
+            <ion-card-header>
+              Core
+            </ion-card-header>
+          </ion-card>
+         
+</ion-content>

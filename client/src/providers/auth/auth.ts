@@ -151,7 +151,19 @@ export class Auth {
       return "Couldn't get user's role!!!!!!" ; 
     }
    }
- 
+
+   getUserWeight(){
+    let payload;
+    const token = this.token;
+    if(token){
+      payload = token.split('.')[1];
+      payload = window.atob(payload);
+      return JSON.parse(payload).weight;      
+    }
+    else {
+      return "Couldn't get user's weight!!!!!!" ; 
+    }
+   }
 
    getUserGoals(){
     let payload;
@@ -162,7 +174,7 @@ export class Auth {
       return JSON.parse(payload).goals;      
     }
     else {
-      return "Couldn't get user's role!!!!!!" ; 
+      return "Couldn't get user's goals!!!!!!" ; 
     }
  
   }
@@ -203,7 +215,7 @@ export class Auth {
           console.log("get User goals ==  " ,data.goals)
           resolve(data.goals);
         }else
-        console.log("get User data ==  " ,data)
+        console.log("get User data ==  " ,data.weight)
        resolve(data);
       }, (err) => {
         console.log("ERROR !!@!@,   " ,err)

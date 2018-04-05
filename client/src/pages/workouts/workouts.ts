@@ -4,6 +4,7 @@ import { WorkoutManagerProvider } from '../../providers/workout-manager/workout-
 import { Auth } from '../../providers/auth/auth';
 import { WorkoutExercisesPage } from '../workout-exercises/workout-exercises'
 import { CreateWorkoutPage } from '../create-workout/create-workout'
+import { TrainersProvider } from '../../providers/trainers/trainers'
 
 
 /**
@@ -25,28 +26,31 @@ export class WorkoutsPage {
   exercises: any;
   test: any;
   a: any;
+  custom_workouts: any;
+  trainer: any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams , public workoutService: WorkoutManagerProvider, public modalCtrl: ModalController,
-    public alertCtrl: AlertController, public authService: Auth, public loadingCtrl: LoadingController ) {
+    public alertCtrl: AlertController, public authService: Auth, public loadingCtrl: LoadingController , public trainerService : TrainersProvider) {
       this.email = authService.getUserEmail();
+
+        
+      // this.trainerService.getCurrentCoach(this.email).then((data) => {
+      //   this.trainer = data;
+      //  }, (err) => {
+      //      console.log("not allowed : " );
+      //  });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad WorkoutsPage');
 
-    this.workoutService.getExercises().then((data) => {
-        this.exercises = data;
-        console.log("get exercises ===  ",data);
+    // this.workoutService.getExercises().then((data) => {
+    //     this.exercises = data;
+    //     console.log("get exercises ===  ",data);
         
-        }, (err) => {
-            console.log("not allowed");
-        });
-
-        this.workoutService.getWorkoutExercises('Workout Test One').then((data) => {
-          console.log("get workout exercises first time with string == ",data);
-          
-          }, (err) => {
-              console.log("not allowed");
-          });
+    //     }, (err) => {
+    //         console.log("not allowed");
+    //     });
 
         this.workoutService.getWorkout(this.email).then((data) => {
           console.log("getWorkout ===-----....",data);
@@ -55,12 +59,26 @@ export class WorkoutsPage {
           }, (err) => {
               console.log("not allowed -----....",err);
           });
-  
+
+     
+//  let details = [
+
+//   "darran1234@gmail.com",
+//   this.email] 
+
+
+//           this.workoutService.getCustomWorkouts(details).then((data) => {
+//             this.custom_workouts = data;
+//             console.log("get custom workouts ===  ",data);
+            
+//             }, (err) => {
+//                 console.log("not allowed");
+//             });
   }
-  newPage(x){
-    console.log("SELECTED :",x);
+  // newPage(x){
+  //   console.log("SELECTED :",x);
     
-  }
+  // }
 
   display(workout_page, e1){
 
@@ -82,30 +100,30 @@ export class WorkoutsPage {
   }
 
 
-addExercise(){    
-       let prompt = this.alertCtrl.create({
-         title: 'Exercises',
-         message: 'Select exercises below:',
-         inputs: [
-           {
-             label: 'text'
-           }
+// addExercise(){    
+//        let prompt = this.alertCtrl.create({
+//          title: 'Exercises',
+//          message: 'Select exercises below:',
+//          inputs: [
+//            {
+//              label: 'text'
+//            }
            
-         ],
-         buttons: [
-           {
-             text: 'Cancel'
-           },
-           {
-             text: 'Add',
+//          ],
+//          buttons: [
+//            {
+//              text: 'Cancel'
+//            },
+//            {
+//              text: 'Add',
           
-           }
-         ]
-       });
+//            }
+//          ]
+//        });
     
-       prompt.present();
+//        prompt.present();
     
-}
+// }
 
 createWorkout(){
   this.navCtrl.setRoot(CreateWorkoutPage);

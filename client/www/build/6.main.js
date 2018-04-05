@@ -1,14 +1,14 @@
 webpackJsonp([6],{
 
-/***/ 289:
+/***/ 293:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__current_pt__ = __webpack_require__(304);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CurrentPtPageModule", function() { return CurrentPtPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exercise_groups__ = __webpack_require__(311);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExerciseGroupsPageModule", function() { return ExerciseGroupsPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,39 +18,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CurrentPtPageModule = (function () {
-    function CurrentPtPageModule() {
+var ExerciseGroupsPageModule = (function () {
+    function ExerciseGroupsPageModule() {
     }
-    return CurrentPtPageModule;
+    return ExerciseGroupsPageModule;
 }());
-CurrentPtPageModule = __decorate([
+ExerciseGroupsPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__current_pt__["a" /* CurrentPtPage */],
+            __WEBPACK_IMPORTED_MODULE_2__exercise_groups__["a" /* ExerciseGroupsPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__current_pt__["a" /* CurrentPtPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__exercise_groups__["a" /* ExerciseGroupsPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__current_pt__["a" /* CurrentPtPage */]
+            __WEBPACK_IMPORTED_MODULE_2__exercise_groups__["a" /* ExerciseGroupsPage */]
         ]
     })
-], CurrentPtPageModule);
+], ExerciseGroupsPageModule);
 
-//# sourceMappingURL=current-pt.module.js.map
+//# sourceMappingURL=exercise-groups.module.js.map
 
 /***/ }),
 
-/***/ 304:
+/***/ 311:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pt_finder_pt_finder__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_trainers_trainers__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__ = __webpack_require__(12);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CurrentPtPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exercise_list_exercise_list__ = __webpack_require__(210);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExerciseGroupsPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -63,56 +61,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
 /**
-* Generated class for the CurrentPtPage page.
-*
-* See http://ionicframework.com/docs/components/#navigation for more info
-* on Ionic pages and navigation.
-*/
-var CurrentPtPage = (function () {
-    function CurrentPtPage(navCtrl, navParams, authService, trainerService) {
+ * Generated class for the ExerciseGroupsPage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var ExerciseGroupsPage = (function () {
+    function ExerciseGroupsPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.authService = authService;
-        this.trainerService = trainerService;
-        this.email = authService.getUserEmail();
-        this.rating = 0;
     }
-    CurrentPtPage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        console.log('ionViewDidLoad CurrentPtPage');
-        this.trainerService.getCurrentCoach(this.email).then(function (data) {
-            _this.name = data;
-        }, function (err) {
-            console.log("not allowed : ");
-        });
-        this.trainerService.getCurrentCoach_email(this.email).then(function (data) {
-            _this.email = data;
-        }, function (err) {
-            console.log("not allowed : ");
-        });
-        this.trainerService.getCurrentCoach_img(this.email).then(function (data) {
-            _this.img = data;
-        }, function (err) {
-            console.log("not allowed : ");
+    ExerciseGroupsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ExerciseGroupsPage');
+    };
+    ExerciseGroupsPage.prototype.ViewExercise = function (selected_muscle) {
+        console.log('ADDED : ', selected_muscle);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__exercise_list_exercise_list__["a" /* ExerciseListPage */], {
+            muscle: selected_muscle
         });
     };
-    CurrentPtPage.prototype.search = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__pt_finder_pt_finder__["a" /* PtFinderPage */]);
-    };
-    return CurrentPtPage;
+    return ExerciseGroupsPage;
 }());
-CurrentPtPage = __decorate([
+ExerciseGroupsPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
-        selector: 'page-current-pt',template:/*ion-inline-start:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/current-pt/current-pt.html"*/' \n    <ion-header>\n            <ion-navbar color="secondary">\n                <ion-buttons start>\n                    <button ion-button icon-only menuToggle>\n                          <ion-icon name="menu"></ion-icon>\n                        </button>\n                   </ion-buttons>\n                      <ion-title>Current Trainer</ion-title>\n            </ion-navbar>\n    </ion-header>\n\n<ion-content>\n  \n          <ion-card>\n        \n            <ion-card-header>\n              Find a Trainer!\n            </ion-card-header>\n            \n            <ion-card-content>\n        \n              <ion-list no-line>\n        \n                <ion-item> \n                   <button ion-button block outline color="secondary" (click)="search()">Search</button>            \n                </ion-item>\n              </ion-list>\n            </ion-card-content>\n          </ion-card>\n          <br>\n\n        <ion-card >\n\n            <ion-card-header>\n                Current Trainer\n             </ion-card-header>\n\n          <ion-card-content>\n\n              <ion-list no-lines>\n                  <ion-item>\n                <ion-avatar item-left >\n                          <img  class="circle-pic" src="{{img}}">\n                </ion-avatar>\n                      <h1>{{name}}</h1>\n                      <h2>{{email}}</h2>\n                </ion-item>\n                \n      \n                \n                <ion-item> \n                    <ion-label color="white">Rate Online Coach (Stars : {{rating}})</ion-label>\n                </ion-item>\n\n                <ion-item>\n                        <ion-range max="10"  pin="true" [(ngModel)]="rating" dark>\n                            <ion-icon range-left small name="star-half"></ion-icon>\n                            <ion-icon range-right name="star"></ion-icon>\n                        </ion-range>\n                 </ion-item>\n\n                 <ion-item> \n                    <button ion-button class="db" (click)="search()">Submit</button>            \n                 </ion-item>\n\n            </ion-list>\n          </ion-card-content>\n        </ion-card>\n</ion-content>\n\n    \n        \n   '/*ion-inline-end:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/current-pt/current-pt.html"*/,
+        selector: 'page-exercise-groups',template:/*ion-inline-start:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/exercise-groups/exercise-groups.html"*/'<!--\n  Generated template for the ExerciseGroupsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-header>\n    <ion-navbar color="secondary">\n        <ion-buttons start>\n            <button ion-button icon-only menuToggle>\n                  <ion-icon name="menu"></ion-icon>\n                </button>\n           </ion-buttons>\n              <ion-title>Exercise Catalogue</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-card (click)="ViewExercise(\'Chest\')">\n    <ion-card-header>\n      <img src="https://cdn-maf0.heartyhosting.com/sites/muscleandfitness.com/files/styles/full_node_image_1090x614/public/media/bench-press-max-ot.jpg?itok=ueAUZjqR&timestamp=1480723989">\n    </ion-card-header>\n    <ion-card-header>\n      Chest\n    </ion-card-header>\n  </ion-card>\n\n  <ion-card (click)="ViewExercise(\'Back\')">\n      <ion-card-header>\n        <img src="https://www.bodybuilding.com/fun/images/2014/18-laws-of-back-training-facebook-box-960x540.jpg">\n      </ion-card-header>\n      <ion-card-header>\n        Back\n      </ion-card-header>\n    </ion-card>\n\n    <ion-card (click)="ViewExercise(\'Arms\')">\n        <ion-card-header>\n          <img src="https://www.bodybuilding.com/fun/images/2014/how-to-build-monster-arms-facebook-960x540.jpg">\n        </ion-card-header>\n        <ion-card-header>\n          Arms\n        </ion-card-header>\n      </ion-card>\n\n      <ion-card (click)="ViewExercise(\'Shoulders\')">\n          <ion-card-header>\n            <img src="https://s3.amazonaws.com/strengthblog/wp-content/uploads/2016/04/20162534/press_banner.jpg">\n          </ion-card-header>\n          <ion-card-header>\n            Shoulders\n          </ion-card-header>\n        </ion-card>\n\n      <ion-card (click)="ViewExercise(\'Legs\')">\n          <ion-card-header>\n            <img src="https://www.bodybuilding.com/fun/images/2015/best-squat-alternatives-desktop.jpg">\n          </ion-card-header>\n          <ion-card-header>\n            Legs\n          </ion-card-header>\n        </ion-card>\n\n        <ion-card (click)="ViewExercise(\'Abs\')">\n            <ion-card-header>\n              <img src="https://health-bt.com/wp-content/uploads/2016/06/93917f57583d47bf8b1914c63be04bf6.jpg">\n            </ion-card-header>\n            <ion-card-header>\n              Core\n            </ion-card-header>\n          </ion-card>\n         \n</ion-content>\n'/*ion-inline-end:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/exercise-groups/exercise-groups.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__["a" /* Auth */], __WEBPACK_IMPORTED_MODULE_3__providers_trainers_trainers__["a" /* TrainersProvider */]])
-], CurrentPtPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+], ExerciseGroupsPage);
 
-//# sourceMappingURL=current-pt.js.map
+//# sourceMappingURL=exercise-groups.js.map
 
 /***/ })
 

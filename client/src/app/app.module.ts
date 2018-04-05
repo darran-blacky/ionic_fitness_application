@@ -29,8 +29,11 @@ import { PtFinderPage } from '../pages/pt-finder/pt-finder';
 import { ViewDealsPage } from '../pages/view-deals/view-deals';
 import { ManageDealsPage } from '../pages/manage-deals/manage-deals';
 import { ViewClientsPage } from '../pages/view-clients/view-clients';
-import { CreateWorkoutPage } from '../pages/create-workout/create-workout';
-import { ProfilePage } from '../pages/profile/profile';
+// import { CreateWorkoutPage } from '../pages/create-workout/create-workout';
+// import { ProfilePage } from '../pages/profile/profile';
+// import { ExerciseGroupsPage } from '../pages/exercise-groups/exercise-groups';
+import { ExerciseInfoPage } from '../pages/exercise-info/exercise-info';
+import { ExerciseListPage } from '../pages/exercise-list/exercise-list';
 
 /** Providers */
 import { Auth } from '../providers/auth/auth';
@@ -53,9 +56,9 @@ import { TrainersProvider } from '../providers/trainers/trainers';
     WorkoutExercisesPage,
     PtFinderPage,
     ManageDealsPage,
-    CreateWorkoutPage,
-    ProfilePage
     
+    ExerciseInfoPage,
+    ExerciseListPage
   ],
   imports: [
     BrowserModule,
@@ -81,10 +84,9 @@ import { TrainersProvider } from '../providers/trainers/trainers';
     WorkoutExercisesPage,
     PtFinderPage,
     ManageDealsPage,
-    CreateWorkoutPage,
-    ProfilePage
-    
    
+    ExerciseInfoPage,
+    ExerciseListPage
   ],
   providers: [
     StatusBar,

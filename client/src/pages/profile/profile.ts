@@ -31,8 +31,9 @@ export class ProfilePage {
 
  // this.email = this.authService.getUserEmail();
     this.details = authService.getUserDetails();
-    this.goals   = this.authService.getUserGoals();
-    this.email   = this.authService.getUserEmail();
+    this.goals   = authService.getUserGoals();
+    this.email   = authService.getUserEmail();
+    // this.current_weight = this.authService.getUserWeight();
     this.refresh();
     
   console.log("details ==   ",this.details);

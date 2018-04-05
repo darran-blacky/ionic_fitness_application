@@ -37,7 +37,8 @@ export class WorkoutManagerProvider {
        });
     
      }
-     getWorkout(email_id){
+     
+  getWorkout(email_id){
       
          return new Promise((resolve, reject) => {
       
@@ -122,6 +123,32 @@ export class WorkoutManagerProvider {
                 });
          
             });
+         
+          }
+
+          getCustomWorkouts(details){
+            // let array = details.split(",");
+            console.log("\n\n coach: " + details + "\n\n");
+            console.log("\n\n client : "  + "\n\n");
+            return new Promise((resolve, reject) => {
+           
+              let headers = new Headers();
+              headers.append('Authorization', this.authService.token);
+
+              this.http.get(this.URL +'api/workouts/customized'+ details,  {headers: headers})
+              .map(res => res.json())
+              .subscribe(data => {
+         
+               console.log("\n\n data exercise : " + data.exercise + "\n\n");
+               console.log("\n\n data exercises : " + data.exercises + "\n\n");
+         
+               
+                resolve(data.exercise);
+              }, (err) => {
+                console.log("ERROR !!@!@,   " ,err)
+                reject(err);
+              });
+          });
          
           }
 

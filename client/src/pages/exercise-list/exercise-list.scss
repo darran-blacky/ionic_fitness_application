@@ -1,0 +1,102 @@
+page-exercise-list {
+ 
+        ion-card.card {
+            box-shadow: none;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+    
+            ion-card-content{
+                    font-size: 0.9em;
+                    opacity: 0.5;
+            }
+            ion-card-header{
+                    padding:0;
+            }
+        }
+    
+        a, p,
+        ion-card-header.card-header {
+            color: #fff!important;
+        }
+    
+        .list > .item-block:first-child {
+            border: medium none;
+        }
+    
+        .item {
+            // margin-bottom: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            border: medium none;
+    
+            .text-input, {
+                color: #fff;
+            }
+    
+            input::-moz-placeholder  {
+                color: #fff!important;
+            }
+    
+            input:-moz-placeholder {
+                color: #fff!important;
+            }
+    
+            *::-webkit-input-placeholder  {
+                color: #fff!important;
+            }
+    
+            *:-ms-input-placeholder  {
+                color: #fff!important;
+            }
+    
+            *:-moz-placeholder  {
+                color: #fff!important;
+            }
+        }
+    
+        .icon {
+            padding-right: 10px;
+        }
+    
+        .bottom {
+            position: absolute;
+            bottom: 0;
+        }
+    
+        .item-profile {
+            height: 75px;
+            .item-avatar > img:first-child {
+              max-width: 50px;
+              max-height: 50px;
+            }
+          }
+          .circle-pic{
+            width:50px;
+            height:50px;
+            border-radius: 100px;
+            -moz-border-radius: 100px; 
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+        }
+    
+       
+        .item-ios ion-avatar ion-img, .item-ios ion-avatar img {
+            border-radius: 50%;
+            overflow: hidden;
+            width: 100px;
+            height: 100px;
+        }
+        .item-ios h1 {
+            margin: 8px 0px -77%;
+            font-size: 1.8rem;
+            font-weight: normal;
+            /* margin: 0%; */
+        }
+        .item-md h1 {
+            margin: 8px 0px -77%;
+            font-size: 1.8rem;
+            font-weight: normal;
+            /* margin: 0%; */
+        }
+        
+    }
+    

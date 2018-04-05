@@ -3,5 +3,60 @@ page-create-workout {
 .button-inner{
     color:"secondary"
 }
+.item-input .label-md{
+    color: white;
+}
+.item-ios{
+    color: white;
+}
+.item-input-has-focus .label-md[floating], .input-has-focus .label-md[floating] {
+    color:white;
+}
+.item {
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border: medium none;
     
+    .text-input, {
+        color: #fff;
+    }
+
+    input::-moz-placeholder  {
+        color: #fff!important;
+    }
+
+    input:-moz-placeholder {
+        color: #fff!important;
+    }
+
+    *::-webkit-input-placeholder  {
+        color: #fff!important;
+    }
+
+    *:-ms-input-placeholder  {
+        color: #fff!important;
+    }
+
+    *:-moz-placeholder  {
+        color: #fff!important;
+    }
+}
+
+.icon {
+    padding-right: 10px;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+}
+.label label-md{
+    color:white;
+}
+.label-md-text-color{
+    color:white;
+}
+.label-md-text-color-focused{
+    color:white;
+}
 }

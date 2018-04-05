@@ -1,14 +1,14 @@
 webpackJsonp([11],{
 
-/***/ 290:
+/***/ 300:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__manage_deals__ = __webpack_require__(210);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ManageDealsPageModule", function() { return ManageDealsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__side_menu__ = __webpack_require__(29);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SideMenuPageModule", function() { return SideMenuPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,26 +18,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ManageDealsPageModule = (function () {
-    function ManageDealsPageModule() {
+var SideMenuPageModule = (function () {
+    function SideMenuPageModule() {
     }
-    return ManageDealsPageModule;
+    return SideMenuPageModule;
 }());
-ManageDealsPageModule = __decorate([
+SideMenuPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__manage_deals__["a" /* ManageDealsPage */],
+            __WEBPACK_IMPORTED_MODULE_2__side_menu__["a" /* SideMenuPage */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__manage_deals__["a" /* ManageDealsPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__side_menu__["a" /* SideMenuPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__manage_deals__["a" /* ManageDealsPage */]
+            __WEBPACK_IMPORTED_MODULE_2__side_menu__["a" /* SideMenuPage */]
         ]
     })
-], ManageDealsPageModule);
+], SideMenuPageModule);
 
-//# sourceMappingURL=manage-deals.module.js.map
+//# sourceMappingURL=side-menu.module.js.map
 
 /***/ })
 

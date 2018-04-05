@@ -1,0 +1,28 @@
+<!--
+  Generated template for the ExerciseListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar color="secondary">
+        <ion-buttons start>
+            <button ion-button icon-only menuToggle>
+                  <ion-icon name="menu"></ion-icon>
+                </button>
+           </ion-buttons>
+              <ion-title>Exercise List</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card (click)="getInfo(exercise.description)" *ngFor="let exercise of exercises" >
+        <ion-card-header>
+          <img src="{{exercise.img}}">
+        </ion-card-header>
+        <ion-card-header>
+          {{exercise.title}}
+        </ion-card-header>
+      </ion-card>
+</ion-content>

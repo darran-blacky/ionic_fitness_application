@@ -4,6 +4,7 @@ import { Auth } from '../../providers/auth/auth';
 import { TrainersProvider } from '../../providers/trainers/trainers'
 import { ManageDealsPage } from '../manage-deals/manage-deals';
 import { RegularUserPage } from '../regular-user/regular-user';
+import { CurrentPtPage } from '../current-pt/current-pt';
 
 
 
@@ -44,5 +45,8 @@ export class PtFinderPage {
       name: trainer
       
     })
+  }
+  goBack(){
+    this.navCtrl.push(CurrentPtPage);
   }
 }

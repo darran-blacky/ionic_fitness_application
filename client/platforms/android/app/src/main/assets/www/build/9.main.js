@@ -1,14 +1,14 @@
 webpackJsonp([9],{
 
-/***/ 293:
+/***/ 305:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__side_menu__ = __webpack_require__(54);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SideMenuPageModule", function() { return SideMenuPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__workout_exercises__ = __webpack_require__(209);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WorkoutExercisesPageModule", function() { return WorkoutExercisesPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,26 +18,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SideMenuPageModule = (function () {
-    function SideMenuPageModule() {
+var WorkoutExercisesPageModule = (function () {
+    function WorkoutExercisesPageModule() {
     }
-    return SideMenuPageModule;
+    return WorkoutExercisesPageModule;
 }());
-SideMenuPageModule = __decorate([
+WorkoutExercisesPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__side_menu__["a" /* SideMenuPage */]
+            __WEBPACK_IMPORTED_MODULE_2__workout_exercises__["a" /* WorkoutExercisesPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__side_menu__["a" /* SideMenuPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__workout_exercises__["a" /* WorkoutExercisesPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__side_menu__["a" /* SideMenuPage */]
+            __WEBPACK_IMPORTED_MODULE_2__workout_exercises__["a" /* WorkoutExercisesPage */]
         ]
     })
-], SideMenuPageModule);
+], WorkoutExercisesPageModule);
 
-//# sourceMappingURL=side-menu.module.js.map
+//# sourceMappingURL=workout-exercises.module.js.map
 
 /***/ })
 

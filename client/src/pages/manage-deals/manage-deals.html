@@ -32,26 +32,18 @@
  <ion-card-content>
      
  <ion-list no-lines >
-
-    <ion-item *ngFor="let offer of offers">
-     
+    <ion-item-sliding *ngFor="let offer of offers">
       <ion-item>
         <span>{{offer.title}}:</span><br>
-        <span>Price : €{{offer.price}}</span><br> 
+        <span>Price : €{{offer.price}}</span>
      </ion-item>
- 
-     <ion-buttons end>
-        <button ion-button icon-only (click)="deleteOffer(offer)"><ion-icon name="add"></ion-icon></button>
-     </ion-buttons>
-
 
      <ion-item-options>
         <button ion-button icon-only large color="danger" (click)="deleteOffer(offer)">
           <ion-icon name="trash"></ion-icon>
         </button>
       </ion-item-options>
-     
-     </ion-item>
+      </ion-item-sliding>
     </ion-list>
 
  </ion-card-content>

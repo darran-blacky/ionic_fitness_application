@@ -6,6 +6,7 @@ import { RegularUserPage } from '../regular-user/regular-user';
 import { PtUserPage } from '../pt-user/pt-user';
 import { DashboardPage } from '../dashboard/dashboard';
 import { SideMenuPage } from '../side-menu/side-menu'
+import { MainPage } from '../main/main';
 
 @IonicPage()
 @Component({
@@ -70,5 +71,7 @@ export class SignupPage {
     this.loading.present();
  
   }
- 
+  launchSignIn(){
+    this.navCtrl.setRoot(MainPage);
+  }
 }

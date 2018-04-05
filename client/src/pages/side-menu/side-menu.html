@@ -1,39 +1,39 @@
 
 <ion-menu [content]="content">
   
-  <ion-content>
-
-      <ion-item class="item-profile" >
-          <div class="item-avatar">
-            <img  class="circle-pic" src="{{details.img}}">
-          </div>
-      </ion-item>
-     
-      <ion-item class="title_1">
-         <b>{{details.name}}</b>
-      </ion-item>
-<ion-item class="title_1">
- </ion-item>
-      <ion-item class="sub_title">
-        <ion-label ><ion-icon class="i" small name="person"><b>Account Type:  </b>   {{details.role}} </ion-icon></ion-label>
-      </ion-item>
-
-      <ion-item class="sub_title">
-          <ion-icon small class="i" name="mail"> <b>Email : </b>  {{details.email}} </ion-icon>
-      </ion-item>
-      <ion-item class="sub_title">
-        <ion-icon small class="i" name="mail"> <b>Weight : </b>  {{details.weight}}Kg </ion-icon>
-    </ion-item>
-    <button class="side_button" ion-button color="secondary" (click)="update()">Update Profile </button>
+        <ion-content>
       
-    <button class="side_button" ion-button block outline color="light" (click)="logout()">Log Out </button>
-
-
-    
-    
-  </ion-content>
-
-</ion-menu>
- 
-<!-- main navigation -->
-<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+            <ion-item class="item-profile" >
+                <div class="item-avatar">
+                  <img  class="circle-pic" src="{{details.img}}">
+                </div>
+            </ion-item>
+           
+            <ion-item class="title_1">
+               <b>{{details.name}}</b>
+            </ion-item>
+      <ion-item class="title_1">
+       </ion-item>
+            <ion-item class="sub_title">
+              <ion-label ><ion-icon class="i" small name="person"><b>Account Type:  </b>   {{details.role}} </ion-icon></ion-label>
+            </ion-item>
+      
+            <ion-item class="sub_title">
+                <ion-icon small class="i" name="mail"> <b>Email : </b>  {{details.email}} </ion-icon>
+            </ion-item>
+            <ion-item class="sub_title">
+              <ion-icon small class="i" name="mail"> <b>Weight : </b>  {{weight}}Kg </ion-icon>
+          </ion-item>
+          <button class="side_button" ion-button color="secondary" (click)="update()">Update Profile </button>
+            
+          <button class="side_button" ion-button block outline color="light" (click)="logout()">Log Out </button>
+      
+      
+          
+          
+        </ion-content>
+      
+      </ion-menu>
+       
+      <!-- main navigation -->
+      <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
