@@ -24795,6 +24795,15 @@ ion-content {
   margin: 0;
 }
 
+.custom-margin_2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
+  font-size: 22px;
+  text-align: center;
+  margin: 0;
+  color: white;
+}
+
 .label label-md {
   color: white;
 }
@@ -25039,7 +25048,7 @@ page-current-pt .item-md h1 {
 
 page-dashboard ion-card-content {
   font-size: 0.9em;
-  opacity: 0.5;
+  opacity: 2.5;
 }
 
 page-dashboard ion-card-header {
@@ -25063,7 +25072,7 @@ page-dashboard ion-card.card {
 
 page-dashboard ion-card.card ion-card-content {
   font-size: 0.9em;
-  opacity: 0.5;
+  opacity: 2.5;
 }
 
 page-dashboard ion-card.card ion-card-header {
@@ -25133,6 +25142,13 @@ page-dashboard .circle-pic {
   border-radius: 50%;
 }
 
+page-dashboard .item-md ion-avatar ion-img, page-dashboard .item-md ion-avatar img {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+}
+
 page-dashboard .item-ios ion-avatar ion-img, page-dashboard .item-ios ion-avatar img {
   border-radius: 50%;
   overflow: hidden;
@@ -25144,6 +25160,7 @@ page-dashboard .item-ios h1 {
   margin: 8px 0px -77%;
   font-size: 1.8rem;
   font-weight: normal;
+  color: white;
   /* margin: 0%; */
 }
 
@@ -25159,16 +25176,6 @@ page-dashboard .titles {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-page-dashboard .card-md .card-ios {
-  margin: 10px;
-  height: 100%;
-  border-radius: 2px;
-  width: calc(100% - 20px);
-  font-size: 2.4rem;
-  background: #fff;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 page-exercise-groups ion-card.card {
