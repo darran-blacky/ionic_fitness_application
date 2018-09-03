@@ -24795,6 +24795,15 @@ ion-content {
   margin: 0;
 }
 
+.custom-margin_2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
+  font-size: 22px;
+  text-align: center;
+  margin: 0;
+  color: white;
+}
+
 .label label-md {
   color: white;
 }
@@ -25039,7 +25048,7 @@ page-current-pt .item-md h1 {
 
 page-dashboard ion-card-content {
   font-size: 0.9em;
-  opacity: 0.5;
+  opacity: 2.5;
 }
 
 page-dashboard ion-card-header {
@@ -25063,7 +25072,7 @@ page-dashboard ion-card.card {
 
 page-dashboard ion-card.card ion-card-content {
   font-size: 0.9em;
-  opacity: 0.5;
+  opacity: 2.5;
 }
 
 page-dashboard ion-card.card ion-card-header {
@@ -25133,6 +25142,13 @@ page-dashboard .circle-pic {
   border-radius: 50%;
 }
 
+page-dashboard .item-md ion-avatar ion-img, page-dashboard .item-md ion-avatar img {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+}
+
 page-dashboard .item-ios ion-avatar ion-img, page-dashboard .item-ios ion-avatar img {
   border-radius: 50%;
   overflow: hidden;
@@ -25144,6 +25160,7 @@ page-dashboard .item-ios h1 {
   margin: 8px 0px -77%;
   font-size: 1.8rem;
   font-weight: normal;
+  color: white;
   /* margin: 0%; */
 }
 
@@ -25159,16 +25176,6 @@ page-dashboard .titles {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-page-dashboard .card-md .card-ios {
-  margin: 10px;
-  height: 100%;
-  border-radius: 2px;
-  width: calc(100% - 20px);
-  font-size: 2.4rem;
-  background: #fff;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 page-exercise-groups ion-card.card {
@@ -26057,6 +26064,22 @@ page-manage-deals .my-class .h2 {
   margin-top: 10% !important;
 }
 
+page-profile .custom_float {
+  color: white;
+}
+
+page-profile .custom_float .label label-md {
+  color: white;
+}
+
+page-profile .custom_float .label-md-text-color {
+  color: white;
+}
+
+page-profile .custom_float .label-md-text-color-focused {
+  color: white;
+}
+
 page-profile .sub_title {
   background-color: #33ac66;
   max-height: 40px;
@@ -26156,6 +26179,30 @@ page-profile .item-md h1 {
   font-size: 1.8rem;
   font-weight: normal;
   /* margin: 0%; */
+}
+
+page-profile .label label-md {
+  color: white;
+}
+
+page-profile .label-md-text-color {
+  color: white;
+}
+
+page-profile .label-md-text-color-focused {
+  color: white;
+}
+
+page-profile .label label-ios {
+  color: white;
+}
+
+page-profile .label-ios-text-color {
+  color: white;
+}
+
+page-profile .label-ios-text-color-focused {
+  color: white;
 }
 
 page-pt-finder ion-card.card {
@@ -26264,7 +26311,6 @@ page-pt-user .list > .item-block:first-child {
 }
 
 page-pt-user .item {
-  margin-bottom: 10px;
   background: rgba(255, 255, 255, 0.5);
   border: medium none;
 }
@@ -26300,6 +26346,43 @@ page-pt-user .icon {
 page-pt-user .bottom {
   position: absolute;
   bottom: 0;
+}
+
+page-pt-user .item-profile {
+  height: 75px;
+}
+
+page-pt-user .item-profile .item-avatar > img:first-child {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+page-pt-user .circle-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  border-radius: 50%;
+}
+
+page-pt-user .item-ios ion-avatar ion-img, page-pt-user .item-ios ion-avatar img {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+}
+
+page-pt-user .item-ios h1 {
+  margin: 8px 0px -77%;
+  font-size: 1.8rem;
+  font-weight: normal;
+  /* margin: 0%; */
+}
+
+page-pt-user .item-md h1 {
+  margin: 8px 0px -77%;
+  font-size: 1.8rem;
+  font-weight: normal;
+  /* margin: 0%; */
 }
 
 page-regular-user ion-card.card {
@@ -26443,6 +26526,10 @@ page-side-menu .i {
 
 page-side-menu .side_button {
   margin-top: 7%;
+}
+
+signup-page {
+  color: white;
 }
 
 signup-page .background {

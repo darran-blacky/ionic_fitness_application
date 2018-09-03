@@ -19,7 +19,7 @@
   
   <ion-content>
     <ion-card-header>
-      Workouts
+      {{selected_workout}} Workout 
     </ion-card-header> 
      <ion-list>
   
@@ -28,7 +28,7 @@
           <img src="{{exercise.img}}">
         </ion-card-header>
         <ion-card-header>
-          {{exercise.title}}
+          {{exercise.title}}             Sets: 3x10
         </ion-card-header>
       </ion-card>
       </ion-list>

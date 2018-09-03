@@ -1,6 +1,6 @@
 import { browser, element, by, ElementFinder } from 'protractor';
  
-describe('Example E2E Test', () => {
+describe('Automated E2E Tests', () => {
  
   beforeEach(() => {
     browser.get('');

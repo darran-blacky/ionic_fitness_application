@@ -15,7 +15,7 @@
     </ion-navbar>
 </ion-header>
 
-
+<ion-card-content>
 <ion-content padding>
     <ion-card (click)="getInfo(exercise.description)" *ngFor="let exercise of exercises" >
         <ion-card-header>
@@ -26,3 +26,4 @@
         </ion-card-header>
       </ion-card>
 </ion-content>
+

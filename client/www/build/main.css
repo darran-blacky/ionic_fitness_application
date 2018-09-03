@@ -24828,6 +24828,14 @@ ion-content {
   color: white;
 }
 
+.alert-md .alert-button {
+  color: seagreen;
+}
+
+.alert-ios .alert-button {
+  color: seagreen;
+}
+
 page-create-workout .button-inner {
   color: "secondary";
 }
@@ -26051,17 +26059,33 @@ page-manage-deals .bottom {
 }
 
 page-manage-deals .my-class .alert-head {
-  background-color: gainsboro;
+  background-color: seagreen;
   font-size: 20px;
 }
 
 page-manage-deals .my-class .alert-message {
   font-size: 20px;
-  color: darkolivegreens;
+  color: darkolivegreen;
 }
 
 page-manage-deals .my-class .h2 {
   margin-top: 10% !important;
+}
+
+page-profile .custom_float {
+  color: white;
+}
+
+page-profile .custom_float .label label-md {
+  color: white;
+}
+
+page-profile .custom_float .label-md-text-color {
+  color: white;
+}
+
+page-profile .custom_float .label-md-text-color-focused {
+  color: white;
 }
 
 page-profile .sub_title {
@@ -26510,6 +26534,10 @@ page-side-menu .i {
 
 page-side-menu .side_button {
   margin-top: 7%;
+}
+
+signup-page {
+  color: white;
 }
 
 signup-page .background {
@@ -27133,6 +27161,96 @@ p {
     -webkit-transform: matrix3d(1, 0, 0, 0, 0.839, 1, 0, 0, 0, 0, 1, 0, 500, 0, 0, 1);
     transform: matrix3d(1, 0, 0, 0, 0.839, 1, 0, 0, 0, 0, 1, 0, 500, 0, 0, 1);
   }
+}
+
+page-workout-exercises ion-card.card {
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+page-workout-exercises a, page-workout-exercises p,
+page-workout-exercises ion-card-header.card-header {
+  color: #fff !important;
+}
+
+page-workout-exercises .list > .item-block:first-child {
+  border: medium none;
+}
+
+page-workout-exercises .item {
+  background: rgba(255, 255, 255, 0.5);
+  border: medium none;
+}
+
+page-workout-exercises .item .text-input {
+  color: #fff;
+}
+
+page-workout-exercises .item input::-moz-placeholder {
+  color: #fff !important;
+}
+
+page-workout-exercises .item input:-moz-placeholder {
+  color: #fff !important;
+}
+
+page-workout-exercises .item *::-webkit-input-placeholder {
+  color: #fff !important;
+}
+
+page-workout-exercises .item *:-ms-input-placeholder {
+  color: #fff !important;
+}
+
+page-workout-exercises .item *:-moz-placeholder {
+  color: #fff !important;
+}
+
+page-workout-exercises .icon {
+  padding-right: 10px;
+}
+
+page-workout-exercises .bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+page-workout-exercises .item-profile {
+  height: 75px;
+}
+
+page-workout-exercises .item-profile .item-avatar > img:first-child {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+page-workout-exercises .circle-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  border-radius: 50%;
+}
+
+page-workout-exercises .item-ios ion-avatar ion-img, page-workout-exercises .item-ios ion-avatar img {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+}
+
+page-workout-exercises .item-ios h1 {
+  margin: 8px 0px -77%;
+  font-size: 1.8rem;
+  font-weight: normal;
+  /* margin: 0%; */
+}
+
+page-workout-exercises .item-md h1 {
+  margin: 8px 0px -77%;
+  font-size: 1.8rem;
+  font-weight: normal;
+  /* margin: 0%; */
 }
 
 page-workouts ion-card.card {

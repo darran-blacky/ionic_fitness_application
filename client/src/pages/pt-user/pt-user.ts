@@ -1,9 +1,10 @@
 import { Component } from "@angular/core";
 import { NavController, ModalController, AlertController, LoadingController } from 'ionic-angular';
-import { Offers } from '../../providers/offers/offers';
+// import { Offers } from '../../providers/offers/offers';
 import { Auth } from '../../providers/auth/auth';
-import { MainPage } from '../main/main';
+// import { MainPage } from '../main/main';
 import { TrainersProvider } from '../../providers/trainers/trainers'
+import { CurrentClientsPage} from '../current-clients/current-clients';
 
 /**
  * Generated class for the RegularUserPage page.
@@ -37,5 +38,9 @@ export class PtUserPage {
           console.log("not allowed");
       });
    
+    }
+
+    goBack(){
+      this.navCtrl.push(CurrentClientsPage);
     }
   }

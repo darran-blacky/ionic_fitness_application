@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Auth } from '../../providers/auth/auth';
 import { TrainersProvider } from '../../providers/trainers/trainers'
-import { ManageDealsPage } from '../manage-deals/manage-deals';
+// import { ManageDealsPage } from '../manage-deals/manage-deals';
 import { RegularUserPage } from '../regular-user/regular-user';
 import { CurrentPtPage } from '../current-pt/current-pt';
 

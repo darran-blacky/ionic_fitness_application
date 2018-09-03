@@ -1,4 +1,4 @@
-import { Component, ViewChild, trigger, transition, style, state, animate, keyframes } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NavController, Slides ,LoadingController } from 'ionic-angular';
 import { TutorialPage } from '../tutorial/tutorial';
 import { Auth } from '../../providers/auth/auth'; 

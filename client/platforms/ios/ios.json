@@ -43,22 +43,22 @@
   },
   "installed_plugins": {
     "cordova-plugin-console": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "darran.blacky"
     },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "darran.blacky"
     },
     "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "darran.blacky"
     },
     "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "darran.blacky"
     },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "darran.blacky"
     },
     "ionic-plugin-keyboard": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "darran.blacky"
     }
   },
   "dependent_plugins": {},

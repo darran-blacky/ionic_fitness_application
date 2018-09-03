@@ -1,4 +1,16 @@
 page-profile {
+	.custom_float{
+		.label label-md{
+			color:white;
+		}
+		.label-md-text-color{
+			color:white;
+		}
+		.label-md-text-color-focused{
+			color:white;
+		}
+		color: white;
+	}
 
     .sub_title{
         background-color: rgb(51, 172, 102);
@@ -113,4 +125,5 @@ page-profile {
 	.label-ios-text-color-focused{
 		color:white;
 	}
+	
 }

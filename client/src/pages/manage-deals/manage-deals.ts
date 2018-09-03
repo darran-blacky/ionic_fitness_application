@@ -88,7 +88,7 @@ export class ManageDealsPage {
           }
         }
       ],
-      cssClass: "my-class"
+      cssClass: "custom_popup"
     });
     
     prompt.present();

@@ -4,7 +4,7 @@ import { Offers } from '../../providers/offers/offers';
 import { Auth } from '../../providers/auth/auth';
 import { MainPage } from '../main/main';
 import { ToastController } from 'ionic-angular';
-import { Observable } from 'rxjs/Observable';
+// import { Observable } from 'rxjs/Observable';
 /**
  * Generated class for the RegularUserPage page.
  *

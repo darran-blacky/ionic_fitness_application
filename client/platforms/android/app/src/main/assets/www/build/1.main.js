@@ -189,7 +189,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  */
 var WorkoutsPage = (function () {
     function WorkoutsPage(navCtrl, navParams, workoutService, modalCtrl, alertCtrl, authService, loadingCtrl, trainerService) {
-        var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.workoutService = workoutService;
@@ -199,11 +198,11 @@ var WorkoutsPage = (function () {
         this.loadingCtrl = loadingCtrl;
         this.trainerService = trainerService;
         this.email = authService.getUserEmail();
-        this.trainerService.getCurrentCoach(this.email).then(function (data) {
-            _this.trainer = data;
-        }, function (err) {
-            console.log("not allowed : ");
-        });
+        // this.trainerService.getCurrentCoach(this.email).then((data) => {
+        //   this.trainer = data;
+        //  }, (err) => {
+        //      console.log("not allowed : " );
+        //  });
     }
     WorkoutsPage.prototype.ionViewDidLoad = function () {
         var _this = this;
@@ -220,16 +219,15 @@ var WorkoutsPage = (function () {
         }, function (err) {
             console.log("not allowed -----....", err);
         });
-        var details = {
-            email: "darran1234@gmail.com",
-            client: this.email
-        };
-        this.workoutService.getCustomWorkouts(details).then(function (data) {
-            _this.custom_workouts = data;
-            console.log("get custom workouts ===  ", data);
-        }, function (err) {
-            console.log("not allowed");
-        });
+        //  let details = [
+        //   "darran1234@gmail.com",
+        //   this.email] 
+        //           this.workoutService.getCustomWorkouts(details).then((data) => {
+        //             this.custom_workouts = data;
+        //             console.log("get custom workouts ===  ",data);
+        //             }, (err) => {
+        //                 console.log("not allowed");
+        //             });
     };
     // newPage(x){
     //   console.log("SELECTED :",x);
@@ -276,7 +274,7 @@ var WorkoutsPage = (function () {
 WorkoutsPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
-        selector: 'page-workouts',template:/*ion-inline-start:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/workouts/workouts.html"*/'<!--\n  Generated template for the WorkoutsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="secondary">\n      <ion-buttons left >\n          <button ion-button icon-only  menuToggle>\n                <ion-icon name="menu"></ion-icon>\n              </button>\n         </ion-buttons>\n    <ion-title>Workouts</ion-title>\n  </ion-navbar>\n  \n</ion-header>\n\n<ion-content>\n  <ion-card>\n  <ion-card-header class="db">\n    Workouts Created by you:\n  </ion-card-header> \n  <ion-card-content>\n   <ion-list>\n  \n      <ion-item *ngFor="let name of names" (click)="display(name.title, name.exercises)">\n          <ion-avatar item-left>\n            <img  src="../../assets/img/workout_logo.png">\n        </ion-avatar>\n          <h1 class="custom-margin">{{name.title}}</h1>\n        </ion-item>\n  \n   </ion-list>\n  </ion-card-content>\n</ion-card>\n      \n<ion-card>\n        \n  <ion-card-header class="db">\n    Workouts Created by your coach:\n  </ion-card-header> \n            \n            <ion-card-content>\n        \n              <ion-list>\n                      <ion-item *ngFor="let workout of custom_workouts" (click)="viewDeals(trainer.email)">\n                        <ion-avatar item-left>\n                          <img  src="../../assets/img/workout_logo.png">\n                      </ion-avatar>\n                        <h1 class="custom-margin">{{workout.name}}</h1>\n                      </ion-item>\n              </ion-list>\n                \n            </ion-card-content>\n          </ion-card>\n \n  \n        <!-- <ion-item> \n             <button width= "100%" ion-button color="secondary" (click)="createWorkout()">Create new Workout<ion-icon name="add"></ion-icon></button>\n        </ion-item> -->\n  \n\n </ion-content>'/*ion-inline-end:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/workouts/workouts.html"*/,
+        selector: 'page-workouts',template:/*ion-inline-start:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/workouts/workouts.html"*/'<!--\n  Generated template for the WorkoutsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="secondary">\n      <ion-buttons left >\n          <button ion-button icon-only  menuToggle>\n                <ion-icon name="menu"></ion-icon>\n              </button>\n         </ion-buttons>\n    <ion-title>Workouts</ion-title>\n  </ion-navbar>\n  \n</ion-header>\n\n<ion-content>\n  <ion-card>\n  <ion-card-header class="db">\n    Workouts Created by you:\n  </ion-card-header> \n  <ion-card-content>\n   <ion-list>\n  \n      <ion-item *ngFor="let name of names" (click)="display(name.title, name.exercises)">\n          <ion-avatar item-left>\n            <img  src="assets/img/workout_logo.png">\n        </ion-avatar>\n          <h1 class="custom-margin">{{name.title}}</h1>\n        </ion-item>\n        \n  \n   </ion-list>\n  </ion-card-content>\n</ion-card>\n      \n<!-- <ion-card>\n        \n  <ion-card-header class="db">\n    Workouts Created by your coach:\n  </ion-card-header> \n            \n            <ion-card-content>\n        \n              <ion-list>\n                      <ion-item *ngFor="let workout of custom_workouts" (click)="viewDeals(trainer.email)">\n                        <ion-avatar item-left>\n                          <img  src="../../assets/img/workout_logo.png">\n                      </ion-avatar>\n                        <h1 class="custom-margin">{{workout.name}}</h1>\n                      </ion-item>\n              </ion-list>\n                \n            </ion-card-content>\n          </ion-card>\n  -->\n  \n        <!-- <ion-item> \n             <button width= "100%" ion-button color="secondary" (click)="createWorkout()">Create new Workout<ion-icon name="add"></ion-icon></button>\n        </ion-item> -->\n  \n\n </ion-content>'/*ion-inline-end:"/Users/darranblackweir/Documents/workspace/Ionic_workspace/myfitnesshelper/client/src/pages/workouts/workouts.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_workout_manager_workout_manager__["a" /* WorkoutManagerProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* AlertController */], __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__["a" /* Auth */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_6__providers_trainers_trainers__["a" /* TrainersProvider */]])

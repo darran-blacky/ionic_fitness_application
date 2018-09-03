@@ -1,8 +1,8 @@
-import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, Nav,LoadingController } from 'ionic-angular';
-import { TabsPage } from './../tabs/tabs';
+import { Component } from '@angular/core';
+import { IonicPage, NavController,LoadingController } from 'ionic-angular';
+// import { TabsPage } from './../tabs/tabs';
 import { Auth } from '../../providers/auth/auth';
-import { MainPage } from '../main/main';
+// import { MainPage } from '../main/main';
 import { SideMenuPage } from '../side-menu/side-menu'
 
 /**

@@ -34,24 +34,40 @@ export class CurrentPtPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CurrentPtPage');
-    
-    this.trainerService.getCurrentCoach(this.email).then((data) => {
-      this.name = data;
-     }, (err) => {
-         console.log("not allowed : " );
-     });
+    try {
 
-     this.trainerService.getCurrentCoach_email(this.email).then((data) => {
-      this.email = data;
-     }, (err) => {
-         console.log("not allowed : " );
-     });
+      this.trainerService.getCurrentCoach(this.email).then((data) => {
+        this.name = data;
+       }, (err) => {
+      this.name = "No Coach";
+           console.log("not allowed : " );
+       });
+  
+       this.trainerService.getCurrentCoach_email(this.email).then((data) => {
+        this.email = data;
+       }, (err) => {
+      this.email = "";
+         
+           console.log("not allowed : " );
+       });
+  
+       this.trainerService.getCurrentCoach_img(this.email).then((data) => {
+        this.img = data;
+       }, (err) => {
+      this.img = "../../assets/img/images.jpeg";
+         
+           console.log("not allowed : " );
+       });
+     
+    }
+    catch(e) {
+      this.name = "No Coach";
+      this.email = "";
+      this.img = "../../assets/img/images.jpeg";
+      console.log(e);
+    }
 
-     this.trainerService.getCurrentCoach_img(this.email).then((data) => {
-      this.img = data;
-     }, (err) => {
-         console.log("not allowed : " );
-     });
+  
   }
 
   search(){

@@ -51,14 +51,17 @@ export class MainPage {
 
   }
  
+  // Method for logging in 
   login(){
-    
+  
+           // Shower loading animation while trying to login  
            this.showLoader();
            let credentials = {
                email: this.email,
                password: this.password
            };
     
+           // Pass the user credentials to the login in method within the authService provider
            this.authService.login(credentials).then((result) => {
                this.loading.dismiss();
                console.log(result);

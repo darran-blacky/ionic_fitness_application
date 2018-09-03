@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController, IonicPage,  LoadingController } from 'ionic-angular';
 import { Auth } from '../../providers/auth/auth';
-import { HomePage } from '../home/home';
-import { RegularUserPage } from '../regular-user/regular-user';
-import { PtUserPage } from '../pt-user/pt-user';
-import { DashboardPage } from '../dashboard/dashboard';
+// import { HomePage } from '../home/home';
+// import { RegularUserPage } from '../regular-user/regular-user';
+// import { PtUserPage } from '../pt-user/pt-user';
+// import { DashboardPage } from '../dashboard/dashboard';
 import { SideMenuPage } from '../side-menu/side-menu'
 import { MainPage } from '../main/main';
 
@@ -22,7 +22,7 @@ export class SignupPage {
   loading: any;
   pattern = "A";
   myForm: any;
-  img: any = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973461_1280.png";
+  img: any = "../../assets/img/bg.jpg";
   age: any;
   goals: any;
   weight: any;

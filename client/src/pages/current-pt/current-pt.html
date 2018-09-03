@@ -1,14 +1,21 @@
- 
+
     <ion-header>
-            <ion-navbar color="secondary">
-                <ion-buttons start>
-                    <button ion-button icon-only menuToggle>
-                          <ion-icon name="menu"></ion-icon>
-                        </button>
-                   </ion-buttons>
-                      <ion-title>Current Trainer</ion-title>
-            </ion-navbar>
-    </ion-header>
+        
+      <ion-navbar color="secondary">
+          <ion-buttons start>
+              <button ion-button icon-only (click)="goBack()">
+                  <ion-icon name="arrow-back"></ion-icon>
+              </button>
+</ion-buttons>
+<ion-buttons end>
+              
+              <button ion-button icon-only  menuToggle>
+                    <ion-icon name="menu"></ion-icon>
+                  </button>
+             </ion-buttons>
+                <ion-title>Current Trainer</ion-title>
+      </ion-navbar>
+</ion-header>
 
 <ion-content>
   

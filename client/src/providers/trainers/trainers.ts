@@ -52,7 +52,7 @@ export class TrainersProvider {
        resolve(data.coach.name);
       }, (err) => {
         console.log("ERROR !!@!@,   " ,err)
-        reject(err);
+        resolve(err);
       });
   });  
 }
@@ -69,8 +69,7 @@ getCurrentCoach_img(email){
     
      resolve(data.coach.img);
     }, (err) => {
-      console.log("ERROR !!@!@,   " ,err)
-      reject(err);
+      resolve(err);
     });
 });  
 }
